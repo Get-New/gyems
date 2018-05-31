@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--<meta name="viewport" content="width=1920px, height=950px,user-scalable=no" />-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=2.0,minimum-scale=0.5 user-scalable=yes" />
+        <title>贵冶天然气计量系统</title>
+        <link href="lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+        <link href="lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+        <link href="lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+        <link href="css/login-style.css" rel="stylesheet" type="text/css" />   
+        <link href="css/style-zhax.css" rel="stylesheet" type="text/css" />   
+    </head>
+<body>
+    <div class="loginbody" style="text-align:center; display:none;">
+        <div class="loginbox" id="loginbox">
+            <form>
+                <input name="UserName" type="text" class="loginuser mloginuser" value="" placeholder=" 用户名" autofocus="autofocus" />
+                <!--<input name="UserPassword" type="password" id="pwd" class="loginpwd mloginpwd" value="" placeholder=" 密码" onkeydown="keydown()" />-->
+                <input name="UserPassword" type="password" id="pwd" class="loginpwd mloginpwd" value="" placeholder=" 密码" />
+                <div class="loginerror" id="loginerror">密码或用户名错误,请重新输入!</div>
+                <input type="button" class="loginbtn mloginbtn" id="sublogin" value="登录" />
+            </form>
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+			</div>
+            <!--<div class="spin" id="loginspin"></div>-->
+        </div>
+    </div>
+
+    <script src="js/common/jquery-1.12.4.js"></script>
+    <script src="lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="lib/alert/js/alert.js"></script>
+    <script src="js/common/json-for-ie7.js"></script>
+    <script src="js/common/util2.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/develop/about/login/login.js"></script>
+</body>
+</html>
