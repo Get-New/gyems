@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>绩效报警系数</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-G.css" rel="stylesheet" />
+    <style>
+        .main-content .content-body {
+            height: 7.7rem;
+        }
+
+        #window_s {
+            width: 9rem;
+            height: 6.5rem;
+            display: block;
+            margin-left: -9999px;
+        }
+
+            #window_s.open {
+                margin-left: 0;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                    <li class="button export" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="SubefficaciousId" id="SubefficaciousId" />
+                    <input type="hidden" name="EfficaciousId" id="EfficaciousId" />
+                    <ul class="length6">
+                        <li><label>工厂部门</label><input type="text" id="ModelBaseName" name="ModelBaseName" readonly="readonly" /></li>
+                        <li><label>绩效报警单元</label><input type="text" id="EfficaciousName" name="EfficaciousName" readonly="readonly" /></li>
+                        <li class="choice">
+                            <a href="javascript:void(0)" class="choose-feature">
+                                <label style="color:blue;cursor:pointer;">报警上限</label>
+                            </a>
+                            <input type="text" id="SubefficaciousUpper" name="SubefficaciousUpper" style="cursor:pointer;" />
+                        </li>
+                        <li class="choice">
+                            <a href="javascript:void(0)" class="choose-feature">
+                                <label style="color:blue;cursor:pointer;">报警下限</label>
+                            </a>
+                            <input type="text" id="SubefficaciousLower" name="SubefficaciousLower" style="cursor:pointer;" />
+                        </li>
+                        <li><label>绩效单位</label><input type="text" id="UnitMeasureName" name="UnitMeasureName" readonly="readonly" /></li>
+                        <li><label>生效时间</label><input id="SubefficaciousEffect" name="SubefficaciousEffect" type="text" class="datetime" /></li>
+                        <li><label>备注</label><input type="text" id="DescriptionInfo" name="DescriptionInfo" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window" id="window_s">
+        <div class="window-title" id="window-head">
+            弹出窗<a class="window-close"><img src="/images2/icon-close.png" /></a>
+        </div>
+        <div class="window-body">
+            <div class="echart-container" id="chart1">
+            </div>
+            <div class="buttons">
+                <span class="button window-cancel" style="float:right;margin-top:0.22rem;margin-right:0.22rem;">关闭</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/tpReport.js"></script>
+    <script src="/js/common/mywin.js"></script>
+    <script src="energysubtarget-consumption.js"></script>
+</body>
+</html>

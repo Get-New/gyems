@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>基础数据管理--检修计划审批</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/js/common/my-tree2.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <script src="metercheckplancheck.js"></script>
+</head>
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>基础数据管理</li>
+            <li>检修计划审批</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="left-content">
+            <div class="content-head">
+                <span id="refresh"></span>
+            </div>
+            <div class="content-body">
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="button query" id="query"></li>
+                    <li>
+                        <select id="MeterCheckPlanCheckState" class="search-condition">
+                            <option value="1">通过</option>
+                            <option value="2">未通过</option>
+                        </select>
+                    </li>
+                    <li class="button button-check" id="check"></li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

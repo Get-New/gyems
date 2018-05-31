@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>折标单元管理</title>
+	<link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+	<link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+	<link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style2.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style-G.css" rel="stylesheet" />
+	<style>
+		.main-content .content-body {
+			height: 7.7rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="tree-selector">
+			<div class="tree-head">
+				<span id="tree-current"></span>
+				<img src="/images2/icon-down-arror.png" />
+			</div>
+			<div class="tree-body">
+				<span id="refresh"></span>
+				<span id="spin"></span>
+				<div class="tree">
+				</div>
+			</div>
+		</div>
+		<div class="main-content">
+			<div class="content-head">
+				<ul class="topbar have-tree-selector">
+					<li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+					<li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+					<li class="button export" id="export">导出Excel</li>
+				</ul>
+			</div>
+			<div class="content-body">
+				<div class="grid-container one-grid-body" id="grid-container">
+				</div>
+				<div class="pagin">
+					<div class="paginList">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-content">
+			<div class="content-body right-panel">
+				<div class="close-button"></div>
+				<div class="arrow-outer"></div>
+				<div class="arrow-inner"></div>
+				<form id="edit-form">
+					<input type="hidden" name="EfficaciousId" id="EfficaciousId" />
+					<input type="hidden" name="EnergyMediumId" id="EnergyMediumId" />
+					<input type="hidden" name="EfficaciousType" id="EfficaciousType" />
+					<ul class="length6">
+						<li><label>能源介质</label><input type="text" id="EnergyMediumName" name="EnergyMediumName" disabled="disabled" /></li>
+						<li><label>折标单元</label><input type="text" id="EfficaciousName" name="EfficaciousName" /></li>
+						<li><label>折标单位</label><select id="EfficaciousUnit" name="EfficaciousUnit"></select></li>
+						<li><label>备注</label><input type="text" id="DescriptionInfo" name="DescriptionInfo" /></li>
+					</ul>
+				</form>
+				<div class="buttons">
+					<span class="button submit-add" id="submit-add">提交新增</span>
+					<span class="button submit-edit" id="submit-edit">保存编辑</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/common/rem.js"></script>
+	<script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+	<script src="/js/common/jquery-1.12.4.js"></script>
+	<script src="/js/common/jquery-ui.js"></script>
+	<script src="/js/common/lodash-3.10.1.js"></script>
+	<script src="/js/common/pagination.js"></script>
+	<script src="/js/common/json-for-ie7.js"></script>
+	<script src="/js/common/util2.js"></script>
+	<script src="/js/common/my-ext-grid2.js"></script>
+	<script src="/js/common/my-right-panel.js"></script>
+	<script src="/js/common/my-form.js"></script>
+	<script src="/js/common/my-ajax.js"></script>
+	<script src="/lib/alert/js/alert.js"></script>
+	<script src="/lib/laydate/laydate.dev.js"></script>
+	<script src="/lib/spin/spin.js"></script>
+	<script src="/js/wlib/mtree.js"></script>
+	<script src="/js/common/my-tree.js"></script>
+
+	<script src="/js/common/echarts.common.min.js"></script>
+	<script src="/js/common/tpReport.js"></script>
+	<script src="/js/common/mywin.js"></script>
+	<script src="energyeffect.js"></script>
+</body>
+</html>

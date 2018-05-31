@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>数据录入-日</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style-zrd.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li><select id="AttriID" name="AttriID" class="dfinput dfselect"></select></li>
+                    <li><input type="text" id="search-sdate" class="datetime" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button edit" id="edit">修改</li>
+                    <li class="button export" id="export">下载模板</li>
+                    <li class="button import" id="import">导入数据</li>
+                </ul>
+                <form id="file-form" class="import" enctype="multipart/form-data" action="/api/ReportDataCopy/Upload" method="post">
+                    <!--<input type="file" id="upload_file" name="upload_file" style="opacity:0;position:relative;left:-2.2rem;width:1rem; height:0.36rem;border:solid 1px red;" />-->
+                    <!--<input type="hidden" id="cycle" name="cycle" value="日" />-->
+                </form>
+            </div>
+            <div class="double-content-body">
+                <div class="content-body-left">
+                    <div class="grid-container collect-group-container" id="collect-group-container">
+                    </div>
+                </div>
+                <div class="content-body-right">
+                    <div class="grid-container" id="grid-container">
+                    </div>
+                    <div class="pagin">
+                        <div class="paginList">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="Report_UnitId" id="Report_UnitId" />
+                    <input type="hidden" name="Report_NaturallyDate" id="Report_NaturallyDate" />
+                    <input type="hidden" name="Report_isFromCopy" id="Report_isFromCopy" />
+                    <ul class="length6">
+                        <li><label>数值</label><input type="text" id="Report_ComputeValue" name="Report_ComputeValue" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-edit" id="submit-edit">保存修改</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="additional-data-input-hour.js"></script>
+</body>
+</html>

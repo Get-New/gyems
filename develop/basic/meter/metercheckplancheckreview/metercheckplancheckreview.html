@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>执行结果审核</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style-zrd.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li class="button" id="edit">审核</li>
+                    <li class="button export" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="double-content-body">
+                <div class="content-body-left">
+                    <div class="grid-container collect-group-container" id="collect-group-container">
+                    </div>
+                </div>
+                <div class="content-body-right">
+                    <div class="grid-container" id="grid-container">
+                    </div>
+                    <div class="pagin">
+                        <div class="paginList">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="MeterCheckPlanCheckID" id="MeterCheckPlanCheckID" />
+                    <input type="hidden" name="MeterCheckPlanID" id="MeterCheckPlanID" />
+                    <input type="hidden" name="MeterBaseID" id="MeterBaseID" />
+                    <input type="hidden" name="MeterCheckPlanCheckComment" id="MeterCheckPlanCheckComment" />
+                    <input type="hidden" name="MeterCheckPlanCheckApprovePerson" id="MeterCheckPlanCheckApprovePerson" />
+                    <input type="hidden" name="MeterCheckPlanCheckApproveTime" id="MeterCheckPlanCheckApproveTime" />
+                    <input type="hidden" name="MeterCheckPlanCheckResult" id="MeterCheckPlanCheckResult" />
+                    <ul class="length6">
+                        <li><label>检修计划名称</label><input type="text" id="MeterCheckPlanName" name="MeterCheckPlanName" disabled="disabled"></li>
+                        <li>
+                            <label>执行结果审核</label><select id="MeterCheckPlanCheckReview" name="MeterCheckPlanCheckReview">
+                                <option value="1">执行结果已审核</option>
+                            </select>
+                        </li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="metercheckplancheckreview.js"></script>
+</body>
+</html>
