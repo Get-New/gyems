@@ -1,0 +1,160 @@
+﻿body {
+    text-align: center;
+    background: url(../images2/bk-login-gradient.png) repeat-x center 0;
+    /*min-width: 857px;
+    max-width: 1920px;
+    min-height:403px;
+    max-height:950px;*/
+}
+
+.loginbody
+{
+  position:static;
+  margin-left:auto;  
+  margin-right: auto;
+  margin-top:223px;
+  width: 877px;
+  height: 430px;
+  text-align:center;
+  background: url(../images2/bk-login-input.png) no-repeat 0 0;
+ 
+}
+
+.loginbox{
+  position:absolute;
+  width: 100%;
+  height:240px;
+  margin-top: 150px;
+}
+
+.loginbox input{
+  display: block;
+  width: 235px;
+  height:34px;
+  color: #000;
+  background-color:#fff;
+  border-radius: 3px;  
+  border: 1px;
+  font-size: 12pt;
+  font-family:'Microsoft YaHei';
+  text-indent:10px;
+  cursor:pointer;
+}
+
+.loginbox input:-webkit-input-placeholder{
+  color: #000;
+}
+.loginbox input:-moz-placeholder{
+  color: #000;
+}
+.loginbox input:-ms-input-placeholder{
+  color: #000;
+}
+.loginuser
+{
+  position: relative;
+  float:inherit;
+  margin-top: 58px;
+  margin-left: 311px; 
+  margin-bottom:0px;
+  margin-right: 0px;
+  background:url(../images2/bk-login-user.png) no-repeat 210px 10px;
+}
+.loginpwd
+{
+  position: relative;
+  margin-top: 18px;
+  margin-left: 311px; 
+  margin-bottom:0px;
+  margin-right: 0px;
+  background:url(../images2/bk-login-password.png) no-repeat 210px 10px;
+}
+
+.loginbox .loginbtn{
+  position:relative;
+  margin-top: 10px;
+  margin-left:auto; 
+  margin-bottom:0px;
+  margin-right: auto;
+  width: 235px;
+  height:34px;
+  background:#d7b43c;
+  color:#fff;
+  /*cursor: pointer;*/
+  font-size: 18pt;
+  font-family:SimHei;
+}
+.loginbox .loginbtn:hover{
+  background:#b98c00;
+}
+
+
+/**/
+#loading-center-absolute {
+	display: none;
+	position: relative;
+	height: 50px;
+	width: 150px;
+	margin-top:10px;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+.object{
+		width: 20px;
+		height: 20px;
+		background-color: #FFF;
+		float: left;
+		/*margin-right: 20px;*/
+		margin-left:20px;
+		margin-top: 15px;
+		-moz-border-radius: 50% 50% 50% 50%;
+		-webkit-border-radius: 50% 50% 50% 50%;
+		border-radius: 50% 50% 50% 50%;
+	}
+
+	#object_one {	
+		-webkit-animation: object_one 1.5s infinite;
+		animation: object_one 1.5s infinite;
+		}
+	#object_two {
+		-webkit-animation: object_two 1.5s infinite;
+		animation: object_two 1.5s infinite;
+		-webkit-animation-delay: 0.25s; 
+	    animation-delay: 0.25s;
+		}
+	#object_three {
+	    -webkit-animation: object_three 1.5s infinite;
+		animation: object_three 1.5s infinite;
+		-webkit-animation-delay: 0.5s;
+	    animation-delay: 0.5s;	
+		}
+	@-webkit-keyframes object_one {
+	75% { -webkit-transform: scale(0); }
+	}
+	@keyframes object_one {
+
+	  75% { 
+	    transform: scale(0);
+	    -webkit-transform: scale(0);
+	  }
+	}
+	@-webkit-keyframes object_two {
+	  75% { -webkit-transform: scale(0); }
+	}
+	@keyframes object_two {
+	  75% { 
+	    transform: scale(0);
+	    -webkit-transform:  scale(0);
+	  }
+	}
+	@-webkit-keyframes object_three {
+
+	  75% { -webkit-transform: scale(0); }
+	}
+	@keyframes object_three {
+
+	  75% { 
+	    transform: scale(0);
+	    -webkit-transform: scale(0);
+	  } 
+	}

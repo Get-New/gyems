@@ -1,0 +1,172 @@
+﻿.pointer { cursor: pointer; }
+
+.font-statistics-metermeasure { line-height: 20px; font: 20px; }
+
+.head-font-with-no-bar li { line-height: 33px; font: 18px '宋体'; margin-top: 6px; }
+
+.dev-length2 li { line-height: 33px; font: 18px '宋体'; }
+.dev-length2 li input { width: 120px; height: 33px; border: 1px solid; }
+.dev-length2 li select { width: 120px; height: 33px; border: 1px solid; margin-top: 3px; }
+.dev-length3 li { line-height: 33px; font: 22px '宋体'; }
+.dev-length3 li select { width: 240px; }
+
+.dev-file { float: left; margin-top: 8px; width: 420px; }
+
+/* 新 数据采集、计量器具、产品产量 */
+.double-content-body { width: 16rem; }
+.content-body-left { margin-left: 0rem; width: 2.2rem; float: left; }
+.content-body-left .collect-group-container { height: 7rem; border: 1px solid lightgray; white-space: nowrap; }
+.content-body-right { margin-left: 0.1rem; width: 13.5rem; border: none; float: left; }
+.content-body-right .grid-container { height: 7rem; border: 1px solid lightgray; }
+
+/* 实时监控 */
+.content-body-right .monitor-content-top { height: 360px; border: 1px solid lightgray; }
+.content-body-right .monitor-content-floor { height: 375px; }
+.content-body-right .monitor-content-floor .grid-container { height: 375px; border: 1px solid lightgray; }
+
+/*monitor_management*/
+.monitor_management #EnergyMedium { width: 100px; height: 36px; margin-top: 3px; border: 1px solid grey; }
+
+/*数据权限管理*/
+.main-content-left-tree { position: absolute; left: 3.2rem; height: 7.4rem; width: 2.15rem; border: solid 1px lightgrey; }
+.main-content-left-tree .content-body { overflow-y: auto; height: 7.4rem; }
+.main-content-left-tree .tree { margin-top: 0.15rem; }
+.main-content-left-tree span { border: dashed 1px #c6d5dc; }
+.positionauthor-main-content-right { margin-left: 5.35rem; }
+
+/*统计单元管理(公式编辑)*/
+.CrewSchedule_Window { width: 11rem; height: 7rem; left: 10%; top: 5%; font-size: 18px; }
+.CrewSchedule_Window ul { width: 4.2rem; margin-left: 0.6rem; }
+.CrewSchedule_Window ul select { width: 2.6rem; height: 0.36rem; margin: 0.1rem; margin-right: 0px; border: 1px solid lightgrey; }
+.CrewSchedule_Window ul input { width: 1.95rem; height: 0.34rem; margin: 0.1rem; margin-right: 0px; border: 1px solid lightgrey; margin-top: 0.2rem; }
+.CrewSchedule_Window ul button { width: 0.52rem; height: 0.35rem; border: 1px solid lightgrey; margin-left: 0.1rem; }
+
+.CrewSchedule_Window .select_area1 { float: left; margin-top: 0.05rem; }
+.CrewSchedule_Window .select_area1 select { margin: 0.1rem 0 0 0.1rem; }
+.CrewSchedule_Window .select_area1 input { margin: 0.1rem 0 0 0.1rem; }
+
+.CrewSchedule_Window .vertical_area1 { float: left; margin-top: 0.1rem; }
+.CrewSchedule_Window .vertical_area2 { float: left; margin-top: 0.2rem; }
+.CrewSchedule_Window .vertical_area3 { float: left; position: absolute; top: 3.1rem; width: 9.7rem; }
+.CrewSchedule_Window .vertical_area3 ul { width: 9.7rem; margin-left: 0.6rem; }
+.CrewSchedule_Window .vertical_area3 ul input { width: 7.5rem; height: 0.35rem; margin: 0.1rem; margin-right: 0px; border: 1px solid lightgrey; }
+.CrewSchedule_Window .vertical_area3 ul textarea { font-size: 16px; width: 7.5rem; height: 1.35rem; margin: 0.1rem; margin-bottom: -0.3rem; margin-right: 0px; border: 1px solid lightgrey; }
+.CrewSchedule_Window .vertical_area4 { float: left; position: absolute; top: 4.6rem; width: 9.7rem; }
+.CrewSchedule_Window .vertical_area4 ul { width: 9.8rem; margin-left: 0.6rem; }
+.CrewSchedule_Window .vertical_area4 ul input { width: 7.5rem; height: 0.35rem; margin: 0.1rem; margin-right: 0px; border: 1px solid lightgrey; }
+.CrewSchedule_Window .vertical_area4 ul textarea { font-size: 16px; width: 7.5rem; height: 1.5rem; margin: 0.1rem; margin-bottom: -0.3rem; margin-right: 0px; border: 1px solid lightgrey; }
+.CrewSchedule_Window .vertical_area5 { position: absolute; top: 6.35rem; left: 2.65rem; width: 5.5rem; }
+
+/*document(文档管理) 预览window*/
+.File_Window { width: 13rem; height: 7.2rem; position: absolute; top: 0.1rem; left: 10%; }
+.File_Window #show_pdf { width: 13rem; height: 7.2rem; }
+
+/*.File_Window #File_Window_close {
+        width: 0.6rem;
+        height: 0.35rem;
+        border: 1px solid lightblue;
+        position: absolute;
+        bottom: 10%;
+        right: 2.4%;
+    }*/
+
+/*chart-config-name(图表配置-图表名称) menu选择window*/
+.Chart_Config_Menu_Window { width: 8rem; height: 7.2rem; float: left; position: absolute; top: 0.1rem; left: 20%; }
+.Chart_Config_Menu_Window #for_tree { width: 3.2rem; height: 5.0rem; margin-top: 0.3rem; margin-left: 0.5rem; overflow-y: auto; float: left; border: solid 1px lightblue; }
+.Chart_Config_Menu_Window #for_show { width: 3.2rem; height: 5.0rem; margin-top: 0.3rem; margin-left: 0.5rem; float: left; border: solid 0px lightblue; }
+.Chart_Config_Menu_Window #for_bar { position: absolute; top: 6rem; left: 1.75rem; width: 5.5rem; }
+
+.long_width1 { width: 1560px; }
+
+.uploadify { position: relative; float: left; margin-top: -0.1rem; padding: 0.07rem; border-radius: 3px 3px; color: #fff; background-color: #d7b23c; text-align: center; font-size: 0.16rem; font-family: SimSun; font-weight: bold; }
+.uploadify-queue-item.completed { background-color: #E5E5E5; }
+.uploadify-progress { position: relative; float: left; background-color: #E5E5E5; margin-top: 0px; width: 100%; }
+.uploadify-progress-bar { background-color: #0099FF; height: 3px; width: 1px; }
+/*.uploadify {
+	position: relative;
+	margin-bottom: 1em;
+}
+.uploadify-button {
+	background-color: #505050;
+	background-image: linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -o-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -moz-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -webkit-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -ms-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #505050),
+		color-stop(1, #707070)
+	);
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 2px solid #808080;
+	color: #FFF;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	width: 100%;
+}
+.uploadify:hover .uploadify-button {
+	background-color: #606060;
+	background-image: linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -o-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -moz-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -webkit-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -ms-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #606060),
+		color-stop(1, #808080)
+	);
+	background-position: center bottom;
+}
+.uploadify-button.disabled {
+	background-color: #D0D0D0;
+	color: #808080;
+}
+.uploadify-queue {
+	margin-bottom: 1em;
+}
+.uploadify-queue-item {
+	background-color: #F5F5F5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 5px;
+	max-width: 350px;
+	padding: 10px;
+}
+.uploadify-error {
+	background-color: #FDE5DD !important;
+}
+.uploadify-queue-item .cancel a {
+	background: url('/develop/upload/uploadify-cancel.png') 0 0 no-repeat;
+	float: right;
+	height:	16px;
+	text-indent: -9999px;
+	width: 16px;
+}
+.uploadify-queue-item.completed {
+	background-color: #E5E5E5;
+}
+.uploadify-progress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadify-progress-bar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}*/
+
+.echarts_line { width: 99.2%; height: 240px; margin-top: 10px; padding: 0px; border: 1px solid lightgrey; }

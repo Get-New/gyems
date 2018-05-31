@@ -1,0 +1,64 @@
+﻿/*collect*/
+.collect-left-panel1 { width: 245px; height: 350px; position: absolute; top: 91px; border: solid 1px #dadada; background-color: #fff; }
+.collect-left-panel2 { width: 245px; height: 350px; position: absolute; top: 350px; border: solid 1px #dadada; background-color: #fff; }
+.collect-grid-container { width: 100%; height: 300px; border: 0; }
+.collect-data-window { width: 850px; height: 600px; position: absolute; top: 2%; left: 20%; background: #fcfdfd; box-shadow: 1px 8px 10px 1px #9b9b9b; border-radius: 1px; behavior: url(js/pie.htc); display: none; z-index: 999; }
+
+.left-content { height: 420px; }
+.left-bottom-content { width: 305px; height: 318px; position: absolute; top: 460px; border: solid 1px #C7D4DD; }
+
+.main-left { width: 210px; position: absolute; left: 320px; top: 80px; }
+.main-right { width: 800px; float: left; margin-left:215px; margin-top: 2px; }
+
+
+.collect-grid-container * { border: none; background-image: none; background-color: transparent; cursor: pointer; }
+.collect-grid-container .x-grid-td { background-color: transparent; }
+.collect-grid-container .x-grid-header-ct .x-box-item { height:40px; font: bold 24px '宋体'; background: #12b8af; color: #5f5f5f; text-indent: 11px; border-left: solid 1px #ccc; border-bottom: solid 1px #ccc; }
+.collect-grid-container .x-grid-header-ct .x-box-item.x-column-header-first { border-left: none; }
+.collect-grid-container .x-grid-cell { line-height: 20px; font: 20px '宋体'; color: #5f5f5f; text-indent: 11px; border-left: solid 1px #ccc; border-bottom: solid 1px #ccc; }
+.collect-grid-container .x-grid-cell-first { border-left: none; }
+.collect-grid-container .x-grid-row-over .x-grid-td { background-color: #f3f6f8; }
+.collect-grid-container .x-grid-row-selected .x-grid-td { background-color: #e2e2e2; }
+
+.left-top-content { width: 305px; height: 740px; position: absolute; border: solid 1px #C7D4DD; }
+
+.pointer { cursor: pointer; }
+
+.font-statistics-metermeasure{ line-height: 20px; font: 20px ; }
+
+.dev-length2 li { line-height: 33px; font: 18px '宋体'; }
+.dev-length2 li input { width: 120px; height: 33px; border: 1px solid; }
+.dev-length2 li select { width: 120px; height: 33px; border: 1px solid; }
+
+.dev-length3 li { line-height: 33px; font: 22px '宋体'; }
+.dev-length3 li select { width: 240px; }
+
+/*collect-data*/
+.main-content-left { position:absolute; left:317px; height: 740px; }
+.collect-group-container { width: 220px; height: 740px; margin-left: 5px; margin-top: 4px; border:1px solid lightgray; }
+.main-content-right { margin-left: 542px; width: auto; }
+.main-content-right .topbar { float: left; }
+.main-content-right .topbar li { float: left; margin-right: 5px; }
+.main-content-right .content-body { border: solid 1px #cdcdce; margin-top: 10px; }
+.main-content-right .grid-container { height: 700px; }
+.main-content-right .pagin { height: 75px; }
+.main-content-right .grid-no-pagin { height: 690px;}
+
+/*班组信息右侧箭头*/
+.right-panel .arrow-outer-floor { position: absolute; top: 500px; right: 100%; border: 20px solid transparent; border-right-color: #dbdbdc; z-index: -1; }
+.right-panel .arrow-inner-floor { position: absolute; top: 502px; right: 100%; border: 18px solid transparent; border-right-color: #f3f6f8; }
+
+.main-content-left-tree { position: absolute; left:323px; height: 740px; width: 305px; border: solid 1px #C7D4DD; }
+/*.main-content-left-tree .content-head { background: #005d58; }*/
+.main-content-left-tree .content-body { background: #c3e9e5; overflow-y: auto; height: 740px; }
+.main-content-left-tree #refresh { width: 50px; height: 19px; float: left; margin-top: 8px; margin-left: 13px; background: url(../images2/icon-refresh.png) no-repeat; cursor: pointer; }
+
+/*职位position*/
+.job-tree-container { width: 320px; height: 740px; margin-left: 5px; margin-top: 5px; border:1px dotted; }
+.job-main-content-right { margin-left: 630px; width: auto; }
+.job-main-content-right .topbar { float: left; }
+.job-main-content-right .topbar li { float: left; margin-right: 5px; }
+.job-main-content-right .content-body { border: solid 1px #cdcdce; margin-top: 10px; }
+.job-main-content-right .grid-container { height: 700px; }
+/*.job-main-content-right .pagin { height: 75px; }*/
+.job-main-content-right .grid-no-pagin { height: 690px;}

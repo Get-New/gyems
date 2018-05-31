@@ -1,0 +1,239 @@
+﻿
+/********************************************人工录入数据****************************************/
+/*左下方表格样式*/
+.content-head-leftbottom { height: 30px; }
+.left-content .content-head-leftbottom { background: #12b8af; margin-top: 50px; }
+.left-bottom-title { font-size: 21px; text-align: center; }
+.group-container-collect { height: 600px; }
+
+/*.left-bottom-group .x-grid-header-ct .x-box-item { height: 50px; font: bold 14pt/50px '宋体'; background: #eff7f4; color: #5f5f5f; text-indent: 11px; }
+
+.left-bottom-group .x-grid-cell { line-height: 60px; font: 14pt/60px '宋体'; color: #5f5f5f; text-indent: 11px; border-left: solid 1px #ccc; border-bottom: solid 1px #ccc; }*/
+
+/***********************************数据源管理(collect-server)********************************************/
+.main-content-forserverpanel { margin-left: 30px; margin-right: 20px; margin-right: 30px; }
+
+/* 中间区域布局 */
+.main-content-forserverpanel .topbar { float: left; }
+.main-content-forserverpanel .topbar li { float: left; margin-right: 5px; }
+.main-content-forserverpanel .content-body { }
+.main-content-forserverpanel .grid-container { height: 625px; }
+.main-content-forserverpanel .pagin { height: 75px; }
+
+@media screen and (max-width:1900px) {
+    .main-content-forserverpanel { margin-left: 21.35px; margin-right: 14.23px; margin-right: 21.35px; }
+
+    /* 中间区域布局 */
+    .main-content-forserverpanel .topbar li { margin-right: 3.56px; }
+    .main-content-forserverpanel .grid-container { height: 6.5rem; }
+    .main-content-forserverpanel .pagin { height: 0.4rem; }
+}
+
+
+/****************************************监控管理*****************************************************/
+
+.monitor-management-window { width: 850px; height: 600px; position: absolute; top: 2%; left: 20%; background: #fcfdfd; box-shadow: 1px 8px 10px 1px #9b9b9b; border-radius: 1px; behavior: url(js/pie.htc); display: none; z-index: 999; }
+/* 弹出框 */
+.window-main-panel { width: 834px; height: 480px; border: solid 1px #cbcbcb; margin: 50px 8px 20px 8px; }
+.window-grid-container { width: 813px; height: 430px; position: absolute; top: 82px; left: 10px; border: solid 1px #cbcbcb; margin: 8px 8px 8px 8px; background-color: transparent; }
+.window-grid-container .x-grid-header-ct .x-box-item { background: #F1F5F4; height: 45px; line-height: 34px; text-indent: 11px; border-left: solid 1px #cdcdcd; border-bottom: solid 1px #dadada; }
+.window-grid-container .x-grid-header-ct .x-box-item.x-column-header-first { border-left: none; }
+.window-main-panel { width: 834px; height: 500px; border: solid 1px #cbcbcb; margin: 50px 8px 20px 8px; }
+
+.window-topbar li { line-height: 33px; height: 33px; border: 0px; float: left; margin-right: 5px; cursor: pointer; }
+.window-topbar li span { float: left; margin-left: 10px; margin-right: 5px; margin-top: 5px; }
+#iquery { color: #2c65db; }
+.file-inputstyle { display: none; }
+
+/*#search-name{width:200px;border:solid black 1px}*/
+
+.chaoge { font: 10; height: 10px; outline: medium none; position: absolute; filter: alpha(opacity=0); -moz-opacity: 0; opacity: 0; left: -100px; top: 155px; cursor: pointer; }
+/*.chaoge input{position:absolute;top:10px;right:20px}*/
+
+/*input.search-condition { width: 350px; height: 36px; color: #333; font: 16pt/36px '宋体'; border: solid 1px #c6d5dc; border-radius: 50px; box-shadow: 2px 2px 3px #C7CACC inset; text-indent: 15px; }*/
+/*select.search-condition { width: 350px; height: 36px; color: #333; font: 16pt/36px '宋体'; border: solid 1px #c6d5dc; box-shadow: 2px 2px 3px #C7CACC inset; text-indent: 15px; }*/
+/*********************************************对标分析/能耗追踪*******************************************************/
+.group-container-combase-analysis { height: 1200px; }
+.middlebar { height: 50px; width: 500px; margin-left: 322px; }
+.zbcleftcontent { height: 1200px; }
+#echt { height: 600px; width: 1435px; margin-left: 322px; }
+/*.datetime{border:solid 1px #000000;height:24px;margin-top:3px}*/
+.tt { font-size: 24px; margin-top: 3px; }
+/*********************************************能耗追踪***********************************************/
+.echtleftlonger { height: 1300px; background: #c3e9e5; }
+.echartbtn1 { border: solid 2px red; height: 40px; width: 100px; margin-top: 20px; text-align: center; background-color: #15ebcb; }
+.echartbtn2 { border: solid 2px red; height: 40px; width: 100px; margin-top: 20px; text-align: center; background-color: #15ebcb; }
+.echartbtn3 { border: solid 2px red; height: 40px; width: 100px; margin-top: 20px; text-align: center; background-color: #15ebcb; }
+#echt1 { border: solid 2px black; width: 800px; height: 500px; margin-left: 300px; position: relative; right: 120px; bottom: 120px; margin-right: 20px; }
+#testtip { border: solid red 2px; width: 800px; height: 20px; position: relative; left: 180px; bottom: 650px; }
+.pie { border: solid red 2px; height: 30px; width: 140px; }
+.pie1 { position: relative; bottom: 480px; }
+/*.pie2{position:relative;bottom:880px;left:1500px}*/
+/*******************************************绩效查询报表********************************************/
+/* 用table绘制的报表 */
+.table-container { }
+.table-container table { border-collapse: collapse; width: 100%; }
+.table-container tr { height: 40px; }
+.table-container th { border: solid 1px #ccc; font: bold 14pt/40px '宋体'; background: #F1F6F4; color: #5f5f5f; text-indent: 11px; }
+.table-container td { border: solid 1px #ccc; font: 12pt/40px '宋体'; color: #5f5f5f; text-align: center; }
+.table-container .grid-container { border: none; }
+
+.table-container table th.lefttoptablefig { background: url(../images2/leftop-zbc1.png) no-repeat center; background-size: 100% 100%; width: 120px; }
+.table-container table tr.achievements-report-title { height: 120px; }
+.table-container table tr.achievements-report-title th { width: 200px; }
+.main-content.has-reporttable { width: 1600px; }
+/**********************************************统计数据查询*************************************************/
+.topbarfonts { font-size: 20px; }
+.zbctopbar { min-width: 1500px; }
+
+/******************************************能源追踪****************************************************/
+/*几个Charts图表的按钮插图*/
+.Charts-type-bar { background: url(../images2/bar_normal.png) no-repeat; width: 100px; height: 40px; margin-top: 10px; }
+.Charts-type-bar:hover { background: url(../images2/bar_focus.png) no-repeat; }
+.Charts-type-pie { background: url(../images2/pie_normal.png) no-repeat; width: 100px; height: 40px; margin-top: 10px; }
+.Charts-type-pie:hover { background: url(../images2/pie_focus.png) no-repeat; }
+.Charts-type-line { background: url(../images2/line_normal.png) no-repeat; width: 100px; height: 40px; margin-top: 10px; }
+.Charts-type-line:hover { background: url(../images2/line_focus.png) no-repeat; }
+
+.auto-circleon { background: url(../images2/autocircleon_normal.png) no-repeat; width: 100px; height: 30px; position: relative; bottom: 188px; left: 250px; }
+.auto-circleoff { background: url(../images2/autocircleoff_normal.png) no-repeat; width: 100px; height: 30px; position: relative; bottom: 220px; left: 360px; }
+.ndger-show { background: url(../images2/roseshow_normal.png) no-repeat; width: 100px; height: 30px; position: relative; bottom: 253px; left: 740px; }
+.ndger-hide { background: url(../images2/rosehide_normal.png) no-repeat; width: 100px; height: 30px; position: relative; bottom: 285px; left: 850px; }
+
+
+/********************************************日月年小时刻******************************************************/
+/*统计单元查询、平衡分析、能耗追踪、耗能分析，如需修改请先联系ZhuRD*/
+/*.management_quater { margin-right:5px;float:left; font-size:20px;}
+.management_quater input { margin-left:10px;font-size:16px;margin-top:2px; margin-right:15px; width:120px;height:24px;border:1px solid grey;}
+.management_quater select { margin-left:10px;font-size:16px;margin-top:2px; margin-right:15px; width:120px;height:26px;border:1px solid grey;}
+.management_quater #search-unit { margin-left:10px;font-size:16px;width:220px;height:26px;border:1px solid grey;}
+.management_quater .button {margin-top:16px;margin-left:12px;float: left;}
+.management_float {float:left; font-size:20px;}
+.hwl350{width:1350px;}
+.lower-height2{position:relative;margin-top:33px;}*/
+
+
+/*.boerder-label{margin:10px}
+.lower-height{position:relative;top:80px}
+.zbc-2lines1{position:relative;bottom:143px;left:430px}
+.zbc-2lines2{position:relative;bottom:123px;left:430px}
+.zbc-2lines3{position:relative;bottom:220px;left:850px}
+.border-dater{margin:10px}
+.twolines-btn{position:relative;bottom:45px;left:919px;width:100px;height:36px;}*/
+/*.lower-height2{position:relative;margin-top:60px;}*/
+/*.zbc-2lines4{position:relative;bottom:133px;left:430px}
+.zbc-2lines5{position:relative;bottom:123px;left:430px}
+.zbc-2lines6{position:relative;bottom:210px;left:850px}*/
+/**************************************************统计班次查询*****************************************************/
+/*.fxcking-top{margin-top:4px}*/
+.echt-for-sg { width: 1200px; height: 600px; border: solid 1px #ccc; position: relative; top: 80px; right: 100px; }
+
+
+/***************************************************2016/11**************************************/
+/********************************************************************************************************/
+.bottom-cht { border: solid 1px #ccc; width: 100%; height: 600px; position: relative; top: 100px; }
+
+/************************************日志****************************************************/
+.diary-label { margin-right: 10px; }
+
+
+/*图形分析界面*/
+.G-echarts { border: solid 1px #ccc; width: 16.4rem; height: 3.2rem; display: block; margin-top: 0.1rem; margin-bottom: 0.2rem; }
+.G-echarts-bottomtwo { float: left; width: 8.1rem; height: 100%; margin-top: 0.1rem; }
+.topline-tool { width: 16.4rem; height: 0.5rem; border: solid 1px #eee; display: block; }
+.container .topline-tool .flbtn1 { float:left; background-image: url(/images2/last_month.png); background-size:100% 100%; width: 0.3rem; height: 0.3rem; margin-top: 0.1rem; margin-left:0.05rem; }
+.container .topline-tool .flbtn1:hover { background-image: url(/images2/last_month_hover.png); }
+.container .topline-tool .flbtn2 { float:right; background-image: url(/images2/next_month.png); background-size:100% 100%; width: 0.3rem; height: 0.3rem; margin-top: 0.1rem; margin-right:0.05rem; }
+.container .topline-tool .flbtn2:hover { background-image: url(/images2/next_month_hover.png); }
+.fl { float: left; }
+#preMonth { }
+#nextMonth .fl{ float:right;}
+h3.fl { margin-left: 36%; cursor:default; line-height:0.5rem;}
+.topline-tool a.fl { font-size: 0.3rem; }
+.topline-tool h3.fl { font-size: 0.3rem; }
+/*.title-tu {margin-left:6rem;font-size:0.5rem}*/
+/*.G-echarts h3{font-size:0.3rem;color:#ccc;margin-left:6.9rem}*/
+.lvse { font-size: 0.32rem; color: #015b59; font-family: "微软雅黑"; cursor: pointer; }
+.pie-fig-title1 { z-index: 10; width: 1rem; height: 1rem; font-family: "微软雅黑"; position: relative; left: 4.4rem; bottom: 3.3rem; }
+.pie-fig-title2 { z-index: 10; width: 1rem; height: 1rem; font-family: "微软雅黑"; position: relative; left: 9.4rem; bottom: 3.3rem; }
+.label-marginlr { margin-left: 0.1rem; margin-right: 0.1rem; }
+
+/***********************************新加的两个图形页面*********************************************************/
+.time-btn{border:solid 1px red;width:1rem;height:0.4rem}
+.for-human-input{width:16.2rem;height:0.8rem;border:solid 1px black;margin:0.1rem;z-index:990;position:relative;bottom:0rem;right:0rem;text-align:center;line-height:0.3rem;}
+
+.pie-fig-title1.for-fig-gaselectwo1 { z-index: 10; width: 1rem; height: 1rem; font-family: "微软雅黑"; position: relative; left: 4.4rem; bottom: 6.4rem; }
+.pie-fig-title2.for-fig-gaselectwo2 { z-index: 10; width: 1rem; height: 1rem; font-family: "微软雅黑"; position: relative; left: 9.4rem; bottom: 6.4rem; }
+
+.div-btn-forsave{border:solid red 1px;width:0.8rem;height:0.3rem;position:relative;bottom:3.5rem;left:0.14rem;z-index:10}
+.div-btn-forcleanout{border:solid red 1px;width:0.8rem;height:0.3rem;position:relative;bottom:3.83rem;left:1.34rem;z-index:10}
+
+#G-echarts41{position:relative;bottom:0rem;display:none;height:5rem;border:solid 1px #ccc}
+/*#G-echarts11 {background-color:white;height:5rem;border:solid 1px #ccc}*/
+#G-echarts11 {background-color:white;height:5.8rem;border:solid 1px #ccc}
+
+/*.G-echarts_those_three-one{height:7.8rem}*/
+
+/*****************************************数据权限配置***************************************/
+
+ul.horizontally-grouped { min-height: 6.5rem; }
+ul.horizontally-grouped li.group { width: 30%; margin-left: 3%; float: left; }
+
+#auth-list .level1 { margin-left: 0.05rem; }
+#auth-list .level2 { margin-left: 0.15rem; }
+#auth-list .level3 { margin-left: 0.25rem; }
+#auth-list .level4 { margin-left: 0.35rem; }
+
+#auth-list { }
+#auth-list div { margin-top: 0.03rem; }
+
+ul.horizontally-list { margin-top: 0.5rem; }
+ul.horizontally-list li { height: 0.3rem; padding-bottom: 0.08rem; cursor: pointer; width: 1.36rem; text-align: center; font-size: 0.2133rem; line-height: 0.3rem; font-family: 'Microsoft YaHei'; float: left; border-bottom: solid 5px #c2eae4; color: #333333; }
+ul.horizontally-list li cite { width: 0.17rem; height: 0.17rem; background: url(/images2/icon-unchecked.png); visibility: collapse; background-size: 100% 100%; }
+ul.horizontally-list li cite.active { background: url(/images2/icon-checked.png); background-size: 100% 100%; }
+ul.horizontally-list li.active { border-bottom-color: #509490; }
+ul.horizontally-list li.active cite { visibility: visible; }
+
+
+.tab-panel { clear: both; }
+.tab-panel .tab-sub-panel { display: none; }
+.tab-panel .tab-sub-panel.active { display: block; }
+
+.tab-panel .tree-panel { background-color: #dff6f1; padding-top: 0.15rem; padding-bottom: 0.5rem; margin-top: 0.15rem; }
+.tab-panel .node { font-size: 0.1862rem; line-height: 0.35rem; font-family: 'Microsoft YaHei'; color: #333333; }
+.tab-panel .level2 { margin-left: 0.15rem; }
+.tab-panel .level3 { margin-left: 0.35rem; clear: both; }
+.tab-panel .level4 { margin-left: 0.15rem;  }
+.tab-panel .level4.first { margin-left: 0.55rem; }
+.tab-panel .node cite { display: inline-block; width: 0.17rem; height: 0.17rem; background-size: 100% 100%; background-image: url(/images2/icon-unchecked.png); margin-right: 0.02rem; }
+.tab-panel .node cite.active { background-image: url(/images2/icon-checked.png); }
+
+
+
+.tab-panel .node.level4{clear:both; margin-left: 0.55rem; }
+.tab-panel .node.level5{clear:left; margin-left: 0.9rem; }
+.tab-panel .node.level6{clear:left; margin-left: 1.2rem; }
+
+
+/*************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

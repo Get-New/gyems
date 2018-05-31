@@ -1,0 +1,14 @@
+﻿@charset "utf-8";
+
+
+/* basic-group */
+.main-content .content-body1 { height:318px;}
+.main-content .content-body2 { height:318px;}
+.main-content .content-body1 .grid-container{ height: 268px; }
+.main-content .content-body2 .grid-container{ height: 268px; }
+
+/* energydiscount*/
+.window .content-body { border: solid 1px #cdcdce; height:300px;}
+.window .topbar { float: left; }
+.window .topbar li { float: left; margin-right: 5px; }
+.window .topbar li label { width: 115px; font: 14pt/33px '宋体'; color: #000; display: block; float: left; text-align: right; padding-right: 15px; }

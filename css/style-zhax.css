@@ -1,0 +1,182 @@
+﻿body {
+}
+
+.main-content .topbar  .textli .iframelabel {
+    font: 22px "宋体 "!important;
+    margin-top:5px!important;
+    margin-right:40px;
+}
+
+.main-content .topbar  .textli .spiframelabel {
+margin-right:-10px;
+}
+
+.main-content .topbar  .textli .monitorlabel {
+margin-right:-10px;
+width:90px;
+}
+
+.staticdatetime{
+    border:1px solid;
+    height:29px;
+    width:150px;
+    margin-right:20px;
+}
+
+.staticdateyear{
+    border:1px solid;
+    height:29px;
+    width:150px;
+    margin-right:20px;
+}
+
+.monitorquery{
+    border:1px solid;
+    height:29px;
+    width:90px;
+    margin-right:20px;
+}
+.mstaticbtn{
+    margin-top:-2px!important;
+}
+
+.topbarright{
+    position:inherit;
+    margin-left:5px;
+}
+
+.modifypwd-box{
+    position:inherit;
+    margin-top:50px;
+}
+
+.iframepwd {
+    width: 100%;
+    height: 34px;
+    font-size: 18pt; !important;
+    font-family: SimHei; !important;
+    position: relative;
+    margin: 30px 0px 0px 311px;
+}
+.iframeinputpwd {
+    border-radius: 3px;
+    border: 1px solid #ADA2A2;
+    width: 200px;
+    height: 34px;
+    font-size: 18pt;
+    font-family: SimHei;
+}
+
+.modifypwd {
+    position:inherit;
+    margin: 40px 0px 0px 90px;
+    width: 205px;
+    height: 34px;
+    background: none repeat scroll 0% 0% #D7B43C;
+    color: #FFF;
+    font-size: 18pt;
+    font-family: SimHei;
+    border-radius:3px;
+}
+
+ .modifypwd:hover {
+        background: none repeat scroll 0% 0% #b98c00;
+    }
+.iframepwdmsg {
+    position: inherit;
+    margin: 70px 0px 0px 50%;
+    font: 22px "宋体 " !important;
+    width: 390px;
+    color: red;
+}
+
+.mainindex .welinfopng{
+    display:block;
+    height:100%; 
+    width:100%;
+}
+
+.mainindex .welinfo .welpng{
+    display:block;
+     margin:80px auto;
+}
+
+.modifypwd-box { display:none;}
+.iframepwdmsg { display:none;}
+
+.mloginuser {
+    width: 280px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mloginpwd {
+width: 280px !important;
+margin-left: auto;
+ margin-right: auto;
+}
+
+.loginerror{
+margin-left: auto; 
+margin-right: auto; 
+margin-top: 0px; 
+border-radius: 3px; 
+background: #fef8d5; 
+height: 34px; 
+width: 280px; 
+border: 1px solid #c9c9c9; 
+background-image: url('/images2/msgicon.png'); 
+background-position: 0px 0px; 
+background-size:17px; 
+background-repeat: no-repeat; 
+color: #8c6e4c; 
+font: 10pt solid 'Microsoft YaHei';
+visibility:hidden;
+
+}
+.mloginbtn{
+width: 280px !important;
+}
+.loginbox .spin {
+  visibility:hidden;
+  position:relative;
+  margin-top: 10px;
+  margin-left:50%; 
+  margin-bottom:0px;
+  margin-right: 50%;
+  /*width: 50px;*/
+  height:34px;
+}
+
+.iframepwd label {
+    width:90px;
+    display:inline-block;
+}
+
+/*.iframepwdlabel {
+    width:90px;
+    display:inline-block;
+}*/
+
+.content-head .unitsDisplay {
+    display:none;
+    width:30%;
+    height:auto;
+    border:solid 1px red;
+    border-radius:2px;
+}
+
+
+/* 固定勾选框 */
+.main-content .windowFixed { border:solid 1px #fff;text-align:center;margin-left:1%;margin-right:1%;width: 7.5rem; height: 0.8rem; position:absolute; top: 3%; left: 5.35rem; background: #fcfdfd; box-shadow: 1px 0.08rem 0.1rem 1px #9b9b9b; border-radius: 1px; behavior: url(js/common/pie.htc); display:inline-block; z-index: 999; }
+.main-content .windowFixed-title { height: 0.2rem; line-height: 0.5rem; background: #e2e2e2; text-indent: 0.1rem; font-size: 0.18rem; font-weight: bold; background: #fff; border-bottom: solid 1px #cdcdcd; text-align:center}
+.main-content .windowFixed-head { height: 0.4rem; line-height: 0.4rem; background: #f5f5f5; }
+.main-content .windowFixed .grid-container { height: 5.3rem; }
+.main-content .windowFixed .windowFixed-body { padding: 0.08rem 0.2rem;position:relative; width:12rem}
+.main-content .windowFixed .choices { overflow-y: auto; height: 0.8rem; width: 7.5rem;}
+.main-content .windowFixed .choices li { float: left; height: 0.25rem; display: block; font-size: 0.18rem; line-height: 0.25rem; margin-top: 0.2rem; padding: 0 0.1rem; border: solid 1px #d0d0d0; margin-left: 0.1rem; margin-right: 0.05rem; min-width: 1rem; text-align: center; cursor: pointer; }
+.main-content .windowFixed .choices .active { background: #549291; color: #fff; }
+.main-content .windowFixed .buttons { margin-top: 0.08rem; margin-left: 0.01rem;position:relative; width:2.5rem}
+.main-content .windowFixed .buttons span { display: inline-block; margin-left: 0.01rem; text-align: center; height: 0.36rem; line-height: 0.36rem; font-size: 0.18rem; background: #00796C; width: 1.05rem; color: #fff; }
+
+
