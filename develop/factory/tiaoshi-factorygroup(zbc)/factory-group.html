@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>班组管理1</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-ZhuRongde.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-G.css" rel="stylesheet" />
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/util2.js"></script>
+
+    <script src="/lib/spin/spin.min.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/js/common/my-tree2.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="factory-group.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="button add" id="add-base"></li>
+                </ul>
+            </div>
+            <div class="content-body content-body1">
+                <div class="grid-container" id="grid-container1">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+            <div class="content-head" style="margin-top:20px;">
+                <ul class="topbar">
+                    <li class="button add" id="add-team"><img src="/images2/icon-btn-add.png" />新增</li>
+                </ul>
+            </div>
+            <div class="content-body content-body2">
+                <div class="grid-container" id="grid-container2">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <div class="arrow-outer-floor"></div>
+                <div class="arrow-inner-floor"></div>
+                <form id="edit-form-group">
+                    <input type="hidden" name="GroupBaseId" id="GroupBaseId" />
+                    <input type="hidden" name="ModelBaseId" id="ModelBaseId" />
+                    <ul class="length6">
+                        <li><label>班组名称：</label><input type="text" id="GroupBaseName" name="GroupBaseName" /></li>
+                        <li><label>班组编码：</label><input type="text" id="GroupBaseCode" name="GroupBaseCode" /></li>
+                        <li><label>班组个数：</label><input type="text" id="GroupBaseNumber" name="GroupBaseNumber" /></li>
+                        <li><label>描述：</label><input type="text" id="DescriptionInfo" name="DescriptionInfo" /></li>
+                    </ul>
+                </form>
+                <form id="edit-form-groupteam">
+                    <input type="hidden" name="GroupTeamId" id="GroupTeamId" />
+                    <ul class="length6">
+                        <li><label>班组名称：</label><select id="GroupBaseId-S" name="GroupBaseId-S" class="dfinput dfselect"></select></li>
+                        <li><label>班组次序：</label><input type="text" id="GroupTeamOrder" name="GroupTeamOrder" /></li>
+                        <li><label>开始时间：</label><input type="text" id="GroupTeamBeginTime" name="GroupTeamBeginTime" class="datetime" onclick="laydatetime()" /></li>
+                        <li><label>结束时间：</label><input type="text" id="GroupTeamEndTime" name="GroupTeamEndTime" class="datetime" onclick="laydatetime()" /></li>
+                        <li><label>时间间隔：</label><input type="text" id="GroupTeamSpaceTime" name="GroupTeamSpaceTime" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+</body>
+</html>

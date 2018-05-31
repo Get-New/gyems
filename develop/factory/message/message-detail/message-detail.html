@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>消息详情</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content main-content-no-left">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="textli"><input id="search-name" type="text" class="search-condition" placeholder="输入消息内容进行查询" onfocus="this.placeholder = ''" onblur="    this.placeholder = '输入消息内容进行查询'" /></li>
+                    <li class="textli">
+                        <label>开始时间</label>
+                        <input type="text" style="width:1.5rem" class="search-condition datetime" id="search-sdate-start" />
+                    </li>
+                    <li class="textli">
+                        <label>结束时间</label>
+                        <input type="text" style="width:1.5rem" class="search-condition datetime" id="search-sdate-end" />
+                    </li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <!--<li class="button" id="edit">编辑</li>-->
+                    <li class="button export" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="MessageLogID" id="MessageLogID" />
+                    <input type="hidden" name="MessageID" id="MessageID" />
+                    <input type="hidden" name="MessagePushedDate" id="MessagePushedDate" />
+                    <input type="hidden" name="IsMessagePushed" id="IsMessagePushed" />
+                    <input type="hidden" name="MessageCommentsDate" id="MessageCommentsDate" />
+                    <ul class="length4">
+                        <li><label>生成时间</label><input type="text" id="MessageMakeDate" name="MessageMakeDate" readonly="readonly" /></li>
+                        <li><label>消息内容</label><input type="text" id="MessageContent" name="MessageContent" readonly="readonly" /></li>
+                        <li><label>处理批注</label><input type="text" id="Comments" name="Comments" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="message-detail.js"></script>
+</body>
+</html>

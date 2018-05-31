@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>报警配置</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <!--<span id="refresh"></span>-->
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li class="textli"><input id="search-name" type="text" class="search-condition" placeholder="输入报警名称进行查询" onfocus="this.placeholder = ''" onblur="    this.placeholder = '输入报警名称进行查询'" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                    <!--<li class="button export" id="export">导出Excel</li>-->
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="WarningID" id="WarningID" />
+                    <input type="hidden" name="ModelBaseID" id="ModelBaseID" />
+                    <ul class="length6">
+                        <li><label>报警名称</label><input type="text" id="WarningName" name="WarningName" /></li>
+                        <li>
+                            <label>筛选类型</label>
+                            <select id="TempType">
+                                <option value=""></option>
+                                <option value="用能">用能</option>
+                                <option value="绩效">绩效</option>
+                                <option value="成本">成本</option>
+                                <option value="折标">折标</option>
+                                <option value="生产">生产</option>
+                            </select>
+                        </li>
+                        <li><label>统计单元</label><select id="UnitID" name="UnitID" class="dfinput dfselect"></select></li>
+                        <li><label>TagName</label><input type="text" id="TagName" name="TagName" /></li>
+                        <li><label>下限</label><input type="text" id="LowerLimitValue" name="LowerLimitValue" /></li>
+                        <li><label>上限</label><input type="text" id="UpperLimitValue" name="UpperLimitValue" /></li>
+                        <li>
+                            <label>报警周期</label>
+                            <select id="ComputeCycle" name="ComputeCycle">
+                                <option value="2">小时</option>
+                                <option value="3">天</option>
+                                <option value="4">月</option>
+                                <option value="5">年</option>
+                                <option value="1">刻</option>
+                            </select>
+                        </li>
+                        <li><label>触发次数（次）</label><input type="text" id="WarningTimes" name="WarningTimes" /></li>
+                        <li><label>触发时长（秒）</label><input type="text" id="WarningDuration" name="WarningDuration" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="warning-config.js"></script>
+</body>
+</html>

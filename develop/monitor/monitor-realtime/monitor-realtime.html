@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>能源实时监控</title>
+	<link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+	<link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+	<link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style2.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style-zrd.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li><select id="MonitorInfoPath" onchange="Page.MonitorInfoPath_onchange()" class="search-condition"></select></li>
+                </ul>
+            </div>
+            <div class="content-body" id="for_pdi">
+            </div>
+    </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <!--<script src="/js/common/pagination.js"></script>-->
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <!--<script src="/js/common/my-right-panel.js"></script>-->
+    <!--<script src="/js/common/my-form.js"></script>-->
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="monitor-realtime.js"></script>
+</body>
+</html>

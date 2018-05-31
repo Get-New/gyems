@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>绩效考核--绩效参数</title>
+    <link rel="stylesheet" href="../../lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="../../lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="../../lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="../../css/style2.css" />
+    <link rel="stylesheet" href="../../css/style-zh.css" />
+    <link rel="stylesheet" href="../../css/style-ZhuRongde.css" />
+    <script src="../../js/common/jquery-1.12.4.js"></script>
+    <script src="../../js/common/jquery-ui.js"></script>
+    <script src="../../js/common/lodash-3.10.1.js"></script>
+    <script src="../../js/common/pagination.js"></script>
+    <script src="../../js/common/json-for-ie7.js"></script>
+    <script src="../../js/common/my-ext-grid.js"></script>
+    <script src="../../js/common/util.js"></script>
+    <script src="../../lib/alert/js/alert.js"></script>
+    <script src="../../lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="../../lib/laydate/laydate.dev.js"></script>
+    <script src="../../lib/spin/spin.js"></script>
+    <script src="../../js/common/my-tree2.js"></script>
+    <script src="../../js/page-js/evaluation/evaluation-kpiparam.js"></script>
+</head>
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>绩效考核</li>
+            <li>绩效参数</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="left-content">
+            <div class="content-head">
+                <span id="refresh"><img src="/images/refresh.png" />刷新</span>
+            </div>
+            <div class="content-body">
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="textli"><input id="search-name" type="text" class="search-condition" placeholder="请输入绩效参数进行查询" onfocus="this.placeholder = ''" onblur="    this.placeholder = '请输入绩效参数进行查询'" /></li>
+                    <li class="button query" id="query"></li>
+                    <!--<li class="button discard" id="discard"></li>-->
+                    <li class="button add" id="add"></li>
+                    <li class="edit" id="btn-edit"><span><img src="/images/t02.png" /></span>修改</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-content">
+            <div class="content-body right-panel big-height">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="EngeryKPIParamID" id="EngeryKPIParamID" />
+                    <input type="hidden" name="ModelBaseID" id="ModelBaseID" />
+                    <ul class="length6">
+                        <li><label>绩效参数</label><input type="text" id="EngeryKPIParamName" name="EngeryKPIParamName"></li>
+                        <li><label>数值</label><input type="text" id="EngeryKPIParamValue" name="EngeryKPIParamValue"></li>
+                        <!--<li><label><a id="edit-UnitMeasureID" href="javascript:void(0)">[选择单位]</a></label><input type="text" id="UnitMeasureID" name="UnitMeasureID" disabled="disabled"></li>-->
+                        <li class="textli"><label><a id="search-unit" href="javascript:void(0)">[查询单位]</a></label><select id="UnitMeasureID" name="UnitMeasureID" class="search-condition"></select></li>
+                        <li><label>描述</label><input type="text" id="DescriptionInfo" name="DescriptionInfo"></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add"></span>
+                    <span class="button submit-edit" id="submit-edit"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
