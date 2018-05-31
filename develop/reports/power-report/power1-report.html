@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1#总降压月电量统计报表</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link href="/css/style-zhax.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head" style="display: inline-block; margin-left: 1%; margin-right: 1%;">
+                <ul class="topbar">
+                    <li class="textli">
+                        <label>统计时间：</label>
+                        <input type="text" style="width:4rem" class="search-condition datetime" id="search-sdate">
+                    </li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />统计</li>
+                    <li class="button" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body" style="border: none; margin-left: 1%; margin-right: 1%; margin-top: 0.2rem; font-size: 0.2rem; ">
+                <div id="table_container" class="table-container" style="width: 100%; text-align: center; margin-left: auto; margin-right:auto;">
+                    <table id="table-power2-report" style="width:100%">
+                        <tr>
+                            <th rowspan="1" colspan="7">1#总降压月电量统计报表</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="7">
+                                <div style="width:100%">
+                                    <label style="display: inline-block; width: 49%; text-align: left">计量单位：10^4 kWh</label>
+                                    <label style="display: inline-block; width: 49%; text-align: right">编号:JC/GYQR0902-DL01</label>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="2">线路及编号</th>
+                            <th rowspan="1" colspan="3">有功电度</th>
+                            <th rowspan="1" colspan="2">累计电量（10^4kWh）</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">上月底数（kWh）</th>
+                            <th rowspan="1" colspan="1">本月底数（kWh）</th>
+                            <th rowspan="1" colspan="1">累计电量（kWh）</th>
+                            <th rowspan="1" colspan="1">月累计 </th>
+                            <th rowspan="1" colspan="1">年累计 </th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">进线</th>
+                            <th rowspan="1" colspan="1">111</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">112</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">发电机发电</th>
+                            <th rowspan="1" colspan="1">624</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">627</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">水厂</th>
+                            <th rowspan="1" colspan="1">671</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">682</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">动力</th>
+                            <th rowspan="1" colspan="1">679</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="6" colspan="1"></td>
+                            <td rowspan="6" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">691</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">发电机用电</th>
+                            <th rowspan="1" colspan="1">624</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">627</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">所用变</th>
+                            <th rowspan="1" colspan="1">610</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">620</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">闪速炉</th>
+                            <th rowspan="1" colspan="1">681</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="6" colspan="1"></td>
+                            <td rowspan="6" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">692</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">转炉</th>
+                            <th rowspan="1" colspan="1">678</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">689</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">闪速循环水</th>
+                            <th rowspan="1" colspan="1">673</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">684</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">硫酸1#配</th>
+                            <th rowspan="1" colspan="1">677</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="6" colspan="1"></td>
+                            <td rowspan="6" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">688</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">硫酸1#配</th>
+                            <th rowspan="1" colspan="1">675</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">686</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">硫酸循环水</th>
+                            <th rowspan="1" colspan="1">672</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">683</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">制氧循环水</th>
+                            <th rowspan="1" colspan="1">674</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="5" colspan="1"></td>
+                            <td rowspan="5" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">685</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">制氧</th>
+                            <th rowspan="1" colspan="1">676</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">687</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">4#制氧机</th>
+                            <th rowspan="1" colspan="1">625</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">电解</th>
+                            <th rowspan="1" colspan="1">613</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="6" colspan="1"></td>
+                            <td rowspan="6" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">615</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">4#电解</th>
+                            <th rowspan="1" colspan="1">663</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">5#电解</th>
+                            <th rowspan="1" colspan="1">664</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">净液</th>
+                            <th rowspan="1" colspan="1">611</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">612</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">备料</th>
+                            <th rowspan="1" colspan="1">622</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">623</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">生活区</th>
+                            <th rowspan="1" colspan="1">617</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">618</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">机修</th>
+                            <th rowspan="1" colspan="1">614</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">616</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">渣选</th>
+                            <th rowspan="1" colspan="1">667</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">668</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">1#锅炉</th>
+                            <th rowspan="1" colspan="1">665</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">2#锅炉</th>
+                            <th rowspan="1" colspan="1">666</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">1#铜加工</th>
+                            <th rowspan="1" colspan="1">661</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="4" colspan="1"></td>
+                            <td rowspan="4" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">2#铜加工</th>
+                            <th rowspan="1" colspan="1">662</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">铜杆</th>
+                            <th rowspan="1" colspan="1">627</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">信江</th>
+                            <th rowspan="1" colspan="1">626</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">电修厂办</th>
+                            <th rowspan="1" colspan="1">619</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">华信</th>
+                            <th rowspan="1" colspan="1">621</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" colspan="1"></td>
+                            <td rowspan="2" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">628</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- <tr>
+                                <th rowspan="1" colspan="3">6KV电压合格率</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">本月进线供入无功电量</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">进线月平均功率因数</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">累计进线平均功率因数</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">统计日供入总电量</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">累计总供入电量</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">统计日供出总电量</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">累计总供出电量</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">本月配电损耗</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">累计进线供入无功电量</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">单位</th>
+                                <th rowspan="1" colspan="2">本月电量</th>
+                                <th rowspan="1" colspan="2">累计电量</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">动力发电机</th>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">倾动炉</th>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">紫杂铜打包</th>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">供销公司</th>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">串山垄水库</th>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">铜材最大负荷（626）</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">1#铜加工最大负荷（661）</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="1" colspan="3">铜杆最大负荷（627)</th>
+                                <td></td>
+                                <th rowspan="1" colspan="2">2#铜加工最大负荷（662)</th>
+                                <td></td>
+                            </tr> -->
+                    </table>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="power1-report.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>统计数据查询</title>
+    <link rel="stylesheet" href="/lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="/lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="/lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+
+   
+
+
+</head>
+<body> 
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar zbctopbar">
+                    <li><label class="topbarfonts">开始日期：</label>  <input type="text" class="datetime" onclick="laydatetime()"></li>
+                    <li><label class="topbarfonts">结束日期：</label>  <input type="text" class="datetime" onclick="laydatetime()"></li>
+                    <li><label class="topbarfonts">能源种类：</label>  <select class="search-condition" id="EnergyMediumId"></select></li>
+                    <li><label class="topbarfonts">统计周期：</label>  <select class="search-condition" id="StatisticCycleTime"></select></li>
+                    <li class="button query" id="query"></li>
+                    <li class="button export" id="export">导出Excel</li>
+
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <link rel="stylesheet" href="/css/style-zh.css" />
+    <link rel="stylesheet" href="/css/style-zbc.css" />
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="statics-dataquery.js"></script>
+</body>
+</html>

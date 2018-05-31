@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>菜单权限配置</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="roleauthor2.js"></script>
+</head>
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>系统管理</li>
+            <li>菜单权限</li>
+            <li>菜单权限配置</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="main-content main-content-no-left">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="choice">
+                        <a href="javascript:void(0)" id="choice-role">
+                            <label>角色</label><input id="RoleName" disabled="disabled">
+                        </a>
+                    </li>
+                    <li class="button query" id="query"></li>
+                    <li class="button button-select-all" id="button-select-all"></li>
+                    <li class="button submit-edit" id="submit-edit"></li>
+                </ul>
+            </div>
+
+            <ul class="horizontally-list" id="menu-level1-tab"></ul>
+
+            <div class="tab-panel" id="auth-panel"></div>
+
+            <!--<ul class="horizontally-grouped" id="auth-list">
+                <li class="group"></li>
+                <li class="group"></li>
+                <li class="group"></li>
+                <li class="group"></li>
+                <li class="group"></li>
+            </ul>-->
+
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="window-title">
+            选择角色<a id="window-close"></a>
+        </div>
+        <div class="window-body">
+            <ul id="rolelist" class="choices"></ul>
+            <div class="buttons">
+                <span class="button window-save" id="window-save">保存</span>
+                <span class="button window-cancel" id="window-cancel">取消</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

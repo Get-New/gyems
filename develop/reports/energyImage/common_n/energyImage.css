@@ -1,0 +1,111 @@
+﻿a { text-decoration: none; }
+
+/* 容器 */
+.panel { position: relative; height: 3.7rem; margin-top: 0.1rem; }
+.panel-level3 { height:4.7rem;}
+.panel-level4 { height:5.7rem;}
+#div2{ margin-top:0.5rem; }
+
+/* 一个单元 包含方框和箭头 */
+.box { position: absolute; top: 1.35rem; }
+.box1 { left: 4rem; top: 0.1rem; }
+.box2 { left: 9rem; top: 0.15rem; }
+#div3 .box1{ left: 6.5rem; }   
+
+/* 方框 */
+.box .inner { width: 2.315rem; min-width: 173px; height: 0.8rem; background-color: #c2eae4; border: solid 1px #529392; position: relative; z-index:1 }
+.box1 .inner { width: 2.735rem; min-width: 173px; height: 0.8rem; }
+.box2 .inner { width: 2.735rem; min-width: 173px; height: 0.75rem; }
+.box-child .link { cursor: pointer; }
+
+/* 图片 */
+.box .inner .icon { width: 0.685rem; height: 0.685rem; position: absolute; left: 0.05rem; top: 0.01rem; }
+.box1 .inner .icon { width: 0.59rem; height: 0.525rem; }
+.box2 .inner .icon { width: 0.505rem; height: 0.505rem; }
+
+/* 标题和数据 */
+.box .title { font-size: 0.15rem; position: absolute; top: 0.02rem; font-family: 'Microsoft YaHei'; }
+.box1 .title { font-size: 0.2rem; font-family: 'Microsoft YaHei'; }
+.box1a .title { font-size: 0.2rem; font-family: 'Microsoft YaHei'; }
+.box .sub { font-size: 0.16rem; color: #838383; position: absolute; font-family: 'Microsoft YaHei'; }
+.box .title,
+.box .sub { left: 0.8rem; }
+.box .wsub { top: 0.25rem; }
+.box .ksub { top: 0.45rem; }
+.box1 .wsub { top: 0.35rem; }
+.box1 .ksub { top: 0.55rem; }
+.box1a .wsub { top: 0.35rem; }
+.box1a .ksub { top: 0.55rem; }
+.subValue { position: absolute;/*top: 1.1rem;*/top:1.5rem;left: 9.3rem;/*height: 0.7rem;*/height:0.3rem;width: 2rem;background-color: #c2eae4;border: solid 1px #529392;z-index: 1;}
+.subValue .sub { left: 0.1rem; }
+.subValue .wsub { top: 0.06rem; }
+/*.subValue .ksub { top: 0.26rem; }
+.subValue .bsub { top: 0.46rem; }*/
+.subValue .sub { font-size: 0.16rem; color: #838383; position: absolute; font-family: 'Microsoft YaHei'; }
+
+/* 箭头 */
+.box .arrow-strip { width: 0.035rem; margin: 0 auto; background-color: #5c8ccf; }
+.box-master .arrow-strip { width: 0.075rem; height: 0.4rem; }
+
+.box .arrow img { position: absolute; width: 0.16rem; height: 0.135rem; left: 50%; margin-left:-0.08rem; bottom: 0.8rem; }
+.box-master .arrow img { width: 0.32rem; height: 0.27rem; margin-left:-0.16rem; bottom: 0; }
+.box1 .arrow img { top:0.9rem;}
+.box2 .arrow img { top:0.85rem;}
+
+/* 横杠 */
+.bar { position: absolute; height: 0.05rem; top: 1.3rem; left: 0.2rem; right: 0.2rem; background-color: #5c8ccf; }
+
+/* 小三角 */
+.box .inner .triangle { width:0.12rem; height:0.12rem; position:absolute; bottom:0; right:0; }
+
+#goback { position: absolute; left: 1rem; top: 0.5rem; font-size: 0.1866rem; z-index:1; color:#267572; font-family:'Microsoft YaHei'; }
+#goback img { width:0.35rem; height:0.35rem; margin-bottom:-0.12rem;}
+
+/* 弹出框 */
+.window { width: 6rem; height: 4rem; position: absolute; top: 3%; left: 30%; background: #fcfdfd; box-shadow: 1px 0.08rem 0.1rem 1px #9b9b9b; border-radius: 1px; behavior: url(js/common/pie.htc); display: none; z-index: 999; border:solid 1px #ccc; }
+.window-title { height: 0.5rem; line-height: 0.5rem; background: #e2e2e2; text-indent: 0.1rem; font-size: 0.18rem; font-weight: bold; background: #fff; border-bottom: solid 1px #cdcdcd; }
+.window-head { height: 0.4rem; line-height: 0.4rem; background: #f5f5f5; }
+.window-close { position:absolute; right:0.1rem; top:0.1rem; }
+.window-close img{ width:0.22rem; height:0.22rem; cursor:pointer; }
+.window .grid-container { height: 5.3rem; }
+.window .window-body { padding: 0.08rem 0.2rem; }
+.window .choices { overflow-y: auto; height: 2.8rem; }
+.window .choices li { float: left; height: 0.25rem; display: block; font-size: 0.18rem; line-height: 0.25rem; margin-top: 0.2rem; padding: 0 0.1rem; border: solid 1px #d0d0d0; margin-left: 0.1rem; margin-right: 0.05rem; min-width: 1rem; text-align: center; cursor: pointer; }
+.window .choices .active { background: #549291; color: #fff; }
+.window .buttons { margin-top: 0.08rem; }
+.window .buttons span { display: inline-block; margin-left: 0.77rem; text-align: center; height: 0.36rem; line-height: 0.36rem; font-size: 0.18rem; background: #00796C; width: 1.05rem; color: #fff; }
+
+/* echarts图形 */
+.echart-container { margin-left:0.1rem; margin-right:0.1rem; height: 5rem;}
+
+/* 模态窗口 */
+.opacity-div-for-modelwin { background: rgba(255, 255, 255, 0.85); z-index: 998; position: fixed; left: 0; top: 0; right:0; bottom:0; }
+
+/* 右键菜单栏 */
+.rightmenu { background: #277572; width: 1.5rem; position:absolute;z-index:9999;}
+.rightmenu a { color: #fff; font-family: 'Microsoft YaHei'; }
+.rightmenu ul { width: 100%; margin: 0; padding: 0; clear: both; }
+.rightmenu .menuson { line-height: 0.45rem; background-color: #007d74; }
+.rightmenu .menuson li { cursor: pointer; padding-left: 0.1rem; height:0.45rem;border-bottom: solid 1px #03856c;list-style:none;}
+.rightmenu .menuson li.active { position: relative; background-color: #fff; }
+.rightmenu .menuson li a { display: inline-block;  font-size:0.16rem; line-height:0.45rem; font-family:'Microsoft YaHei';float:left;margin-left:0.2rem;}
+.rightmenu .menuson li.active a { color: #005d58; }
+
+.hide { display:none; }
+.bar1 { position: absolute; height: 0.05rem; top: 3.2rem; left: 0.2rem; right: 0.2rem; background-color: #5c8ccf;  }
+.box1a { top: 1rem;left: 6.5rem;  }
+.box1a .arrow-strip { height: 1.4rem; }
+#div3 .box-child { top: 3.25rem; }
+.box1a .arrow img { top: 1.9rem; }
+#div3 { height:7.8rem;}
+#window { width: 12.5rem; height: 6.5rem; display: block; margin-left: -9999px;}
+#window.open { margin-left: -3rem;}
+.window_buttom { margin-left:0.1rem; margin-right:0.1rem; height:26px;}
+.window_buttom .button1 { width:26px; height:26px;}
+.window_buttom .time-interval { width: 100px; height: 26px;}
+#interval-enlarge { cursor: pointer; float: left; margin-left: 4.5rem; background-image: url(/images2/interval_enlarge.png);}
+#interval-reduce { cursor: pointer; float: left; margin-left: 0.1rem; background-image: url(/images2/interval_reduce.png);}
+#time-interval { float: left; margin-left: 0.1rem;}
+#end-reduce { cursor: pointer; float: left; margin-left: 0.1rem; background-image: url(/images2/end_reduce.png);}
+#end-enlarge { cursor: pointer; float: left; margin-left: 0.1rem; background-image: url(/images2/end_enlarge.png);}
+#reset { cursor: pointer; float: left; margin-left: 0.1rem; background-image: url(/images2/reset.png);}

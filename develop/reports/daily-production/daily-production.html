@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>天然气结算（详细）</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link href="/css/style-zhax.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head" style="display: inline-block; margin-left: 1%; margin-right: 1%;">
+                <ul class="topbar">
+                    <li class="textli">
+                        <label>统计时间：</label>
+                        <input type="text" style="width:4rem" class="search-condition datetime" id="search-sdate" />
+                    </li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />统计</li>
+                    <li class="textli">
+                        <label>开始时间：</label>
+                        <input type="text" style="width:1.5rem" class="search-condition datetime" id="search-sdate-start" />
+                    </li>
+                    <li class="textli">
+                        <label>结束时间：</label>
+                        <input type="text" style="width:1.5rem" class="search-condition datetime" id="search-sdate-end" />
+                    </li>
+                    <li class="button" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body" style="border: none; margin-left: 1%; margin-right: 1%; margin-top: 0.2rem; font-size: 0.2rem; ">
+                <div id="table_container" class="table-container" style="width: 100%; text-align: center; margin-left: auto; margin-right:auto;">
+                    <table id="table1" style="width:100%">
+                        <tr>
+                            <th rowspan="1" colspan="4" style="border:none;background-color:white;">（动态数据，仅供参考）</th>
+                            <th rowspan="1" colspan="4" id="date_title" style="border:none;background-color:white;"></th>
+                            <th rowspan="1" colspan="4" style="border:none;background-color:white;">JC/GYQR0910-SC02</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="4" style="width:8rem">产品产量</th>
+                            <th rowspan="1" colspan="4" style="width:8rem">主要工序作业情况</th>
+                            <th rowspan="1" colspan="4" style="width:8rem">原料进厂情况</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1" style="width:3rem">项目</th>
+                            <th rowspan="1" colspan="1" style="width:1rem">单位</th>
+                            <th rowspan="1" colspan="1" style="width:2rem">日完成</th>
+                            <th rowspan="1" colspan="1" style="width:2rem">月累计</th>
+                            <th rowspan="1" colspan="1" style="width:3rem">项目</th>
+                            <th rowspan="1" colspan="1" style="width:1rem">单位</th>
+                            <th rowspan="1" colspan="1" style="width:2rem">日完成</th>
+                            <th rowspan="1" colspan="1" style="width:2rem">月累计</th>
+                            <th rowspan="1" colspan="1" style="width:3rem">项目</th>
+                            <th rowspan="1" colspan="1" style="width:1rem">单位</th>
+                            <th rowspan="1" colspan="1" style="width:2rem">日完成</th>
+                            <th rowspan="1" colspan="1" style="width:2rem">月累计</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">一系列阴极铜产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">1#FF精矿处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">德兴矿出厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">二系列阴极铜产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">2#FF精矿处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">永平矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">三系列阴极铜产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">FF精矿处理量合计</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">银山矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">阴极铜产量合计</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">转炉Ⅰ杂铜处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">东乡矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">熔炼Ⅰ阳极浇铸量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">转炉Ⅱ杂铜处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">武山矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">熔炼Ⅱ阳极浇铸量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">倾动炉杂铜处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">城门山矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">倾动炉阳极浇铸量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">反射炉杂铜处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">进口矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">反射炉阳极浇铸量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">KF杂铜处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">地方矿进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">阳极浇铸量合计</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">杂铜处理量合计</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">铜精矿进厂总计</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">阳极铜净产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">阳极炉I残极处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">粗杂铜进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">一系统硫酸产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">阳极炉II残极处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">燃煤进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">二系统硫酸产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">转炉Ⅰ残极处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">重油进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">硫酸总产量(98%)</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">转炉Ⅱ残极处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="4">部分工艺参数</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">硫酸总产量(100%)</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">倾动炉残极处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">项目</th>
+                            <th rowspan="1" colspan="1">单位</th>
+                            <th rowspan="1" colspan="2">参数值</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">三氧化二砷产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">反射炉残极处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">1#FF冰铜品位</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">硫酸铜产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">残极处理总量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">2#FF冰铜品位</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">精铋产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">一系统转炉炉次</th>
+                            <th rowspan="1" colspan="1">炉</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">EF渣含铜</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">精碲产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">二系统转炉炉次</th>
+                            <th rowspan="1" colspan="1">炉</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">2#FF渣含铜</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">二氧化硒产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">一系统阳极炉炉次</th>
+                            <th rowspan="1" colspan="1">炉</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">KF渣含铜</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">铼酸铵产量</th>
+                            <th rowspan="1" colspan="1">kg</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">二系统阳极炉炉次</th>
+                            <th rowspan="1" colspan="1">炉</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">反射炉渣含铜</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">焦锑酸钠</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">卡尔多炉炉次</th>
+                            <th rowspan="1" colspan="1">炉</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">倾动炉渣含铜</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">工业硒产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">阳极泥处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">渣选精矿品位</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">再生铜拆出量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">亚砷滤饼处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">1系列渣选尾矿品位</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="4">主要库存</th>
+                            <th rowspan="1" colspan="1">亚砷浸出渣产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">2系列渣选尾矿品位</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">项目</th>
+                            <th rowspan="1" colspan="1">单位</th>
+                            <th rowspan="1" colspan="2">库存量</th>
+                            <th rowspan="1" colspan="1">选矿渣处理量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">硫酸ⅠSO2转化率</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">阴极铜库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">尾矿销售量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">硫酸ⅡSO2转化率</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">硫酸库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="4">中间及辅助产品产量</th>
+                            <th rowspan="1" colspan="1">硫酸ⅢSO2转化率</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">一系统精矿库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">项目</th>
+                            <th rowspan="1" colspan="1">单位</th>
+                            <th rowspan="1" colspan="1">日完成</th>
+                            <th rowspan="1" colspan="1">月累计</th>
+                            <th rowspan="1" colspan="1">硫酸ⅣSO2转化率</th>
+                            <th rowspan="1" colspan="1">%</th>
+                            <td rowspan="1" colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">二系统精矿库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">动力低压蒸汽产量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="4">能源消耗及产品销售</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">铜精矿总库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">1#透平发电量</th>
+                            <th rowspan="1" colspan="1">kkwh</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">项目</th>
+                            <th rowspan="1" colspan="1">单位</th>
+                            <th rowspan="1" colspan="1">日完成</th>
+                            <th rowspan="1" colspan="1">月累计</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">一系统杂铜库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">2#透平发电量</th>
+                            <th rowspan="1" colspan="1">kkwh</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">重油消耗合计</th>
+                            <th rowspan="1" colspan="1">kl</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">二系统杂铜库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">透平发电量合计</th>
+                            <th rowspan="1" colspan="1">kkwh</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">天然气消耗合计</th>
+                            <th rowspan="1" colspan="1">nm3</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">杂铜总库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">净化水供水量</th>
+                            <th rowspan="1" colspan="1">kt</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">电厂蒸汽消耗合计</th>
+                            <th rowspan="1" colspan="1">nm3</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">重油库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">生活水供水量</th>
+                            <th rowspan="1" colspan="1">kt</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">总供电量</th>
+                            <th rowspan="1" colspan="1">kkwh</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">尾矿库存</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="2"></td>
+                            <th rowspan="1" colspan="1">制氧总产氧量</th>
+                            <th rowspan="1" colspan="1">KNm3</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <th rowspan="1" colspan="1">阴极铜销售量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1"></th>
+                            <th rowspan="1" colspan="1"></th>
+                            <th rowspan="1" colspan="2"></th>
+                            <th rowspan="1" colspan="1"></th>
+                            <th rowspan="1" colspan="1"></th>
+                            <th rowspan="1" colspan="1"></th>
+                            <th rowspan="1" colspan="1"></th>
+                            <th rowspan="1" colspan="1">阳极板进厂量</th>
+                            <th rowspan="1" colspan="1">吨</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <!--<script src="/js/common/my-right-panel.js"></script>-->
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <!--<script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>-->
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="daily-production.js"></script>
+</body>
+</html>

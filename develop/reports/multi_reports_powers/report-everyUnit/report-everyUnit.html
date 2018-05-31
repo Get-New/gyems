@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>各单位耗电量</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <!--<link href="/css/style-zbc.css" rel="stylesheet" />-->
+    <script src="../Faker.js"></script>
+    <style>
+        .table-container {
+            margin-bottom: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head" style="display: inline-block; margin-left: 1%; margin-right: 1%;">
+                <ul class="topbar">
+                    <li class="textli">
+                        <label>统计时间：</label>
+                        <select id="s1"></select>
+                        <!--<input type="text" style="width:4rem" class="search-condition datetime" id="search-sdate" />-->
+                    </li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />统计</li>
+                    <li class="button" id="export">导出Excel</li>
+                </ul>
+            </div>
+                <div class="table-container">
+                    <table id="re1" style="width:100%">
+                        <tr>
+                            <th colspan="14">各单位电力消耗计量统计（单位万Kwh）</th>
+                        </tr>
+                        <tr>
+                            <th>序号</th>
+                            <th>名称</th>
+                            <th>1月</th>
+                            <th>2月</th>
+                            <th>3月</th>
+                            <th>4月</th>
+                            <th>5月</th>
+                            <th>6月</th>
+                            <th>7月</th>
+                            <th>8月</th>
+                            <th>9月</th>
+                            <th>10月</th>
+                            <th>11月</th>
+                            <th>12月</th>
+                        </tr>
+                        <tr id="tr0">
+                            <th>1</th>
+                            <th>熔炼</th>
+                        </tr>
+                        <tr id="tr1">
+                            <th>2</th>
+                            <th>倾动炉</th>
+                        </tr>
+                        <tr id="tr2">
+                            <th>3</th>
+                            <th>电解</th>
+                        </tr>
+                        <tr id="tr3">
+                            <th>4</th>
+                            <th>硫酸</th>
+                        </tr>
+                        <tr id="tr4">
+                            <th>5</th>
+                            <th>金银</th>
+                        </tr>
+                        <tr id="tr5">
+                            <th>6</th>
+                            <th>备料</th>
+                        </tr>
+                        <tr id="tr6">
+                            <th>7</th>
+                            <th>供销</th>
+                        </tr>
+                        <tr id="tr7">
+                            <th>8</th>
+                            <th>供热</th>
+                        </tr>
+                        <tr id="tr8">
+                            <th>9</th>
+                            <th>动力</th>
+                        </tr>
+                        <tr id="tr9">
+                            <th>10</th>
+                            <th>制氧</th>
+                        </tr>
+                        <tr id="tr10">
+                            <th>11</th>
+                            <th>供水</th>
+                        </tr>
+                        <tr id="tr11">
+                            <th>12</th>
+                            <th>亚砷</th>
+                        </tr>
+                        <tr id="tr12">
+                            <th>13</th>
+                            <th>新材料</th>
+                        </tr>
+                        <tr id="tr13">
+                            <th>14</th>
+                            <th>厂办</th>
+                        </tr>
+                        <tr id="tr14">
+                            <th>15</th>
+                            <th>环保</th>
+                        </tr>
+                        <tr id="tr15">
+                            <th>16</th>
+                            <th>化验</th>
+                        </tr>
+                        <tr id="tr16">
+                            <th>17</th>
+                            <th>编组站</th>
+                        </tr>
+                        <tr id="tr17">
+                            <th>18</th>
+                            <th>居民用电</th>
+                        </tr>
+                        <tr id="tr18">
+                            <th>19</th>
+                            <th>公共事业</th>
+                        </tr>
+                        <tr id="tr19">
+                            <th>20</th>
+                            <th>贵冶医院</th>
+                        </tr>
+                        <tr id="tr20">
+                            <th>21</th>
+                            <th>铜苑宾馆</th>
+                        </tr>
+                        <tr id="tr21">
+                            <th>22</th>
+                            <th>冶化技术</th>
+                        </tr>
+                        <tr id="tr22">
+                            <th>23</th>
+                            <th>铜达公司</th>
+                        </tr>
+                        <tr id="tr23">
+                            <th>24</th>
+                            <th>建安公司</th>
+                        </tr>
+                        <tr id="tr24">
+                            <th>25</th>
+                            <th>防腐公司</th>
+                        </tr>
+                        <tr id="tr25">
+                            <th>26</th>
+                            <th>物流公司</th>
+                        </tr>
+                        <tr id="tr26">
+                            <th>27</th>
+                            <th>铜业公司</th>
+                        </tr>
+                        <tr id="tr27">
+                            <th>28</th>
+                            <th>铜材公司</th>
+                        </tr>
+                        <tr id="tr28">
+                            <th>29</th>
+                            <th>材设公司</th>
+                        </tr>
+                        <tr id="tr29">
+                            <th>30</th>
+                            <th>其它转供</th>
+                        </tr>
+                        <tr id="tr30">
+                            <th>31</th>
+                            <th>其中农村</th>
+                        </tr>
+                        <tr id="tr31">
+                            <th colspan="2">消耗合计</th>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <!--<script src="/js/common/pagination.js"></script>-->
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <!--<script src="/js/common/my-ext-grid2.js"></script>-->
+    <!--<script src="/js/common/my-right-panel.js"></script>-->
+    <!--<script src="/js/common/my-form.js"></script>-->
+    <!--<script src="/js/common/my-ajax.js"></script>-->
+    <script src="/lib/spin/spin.js"></script>
+    <!--<script src="/js/wlib/mtree.js"></script>-->
+    <!--<script src="/js/common/my-tree.js"></script>-->
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <!--<script src="/js/common/echarts.common.min.js"></script>-->
+    <!--<script src="../../../js/common/dst.js"></script>-->
+    <script src="report-everyUnit.js"></script>
+</body>
+</html>

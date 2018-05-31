@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文档权限分组</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>系统管理</li>
+            <li>文档权限</li>
+            <li>文档权限分组</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="main-content main-content-no-left">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="textli"><input id="search-name" type="text" class="search-condition" placeholder="输入分组名称进行查询" onfocus="this.placeholder = ''" onblur="    this.placeholder = '输入分组名称进行查询'" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input id="FiledirId" name="FiledirId" type="hidden" />
+                    <ul class="length6">
+                        <li><label>分组名称</label><input id="FiledirName" name="FiledirName" type="text" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="filedir.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>能耗-折标煤 详情</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="goback" id="goback" style="display:none;">
+        <a href="javascript:void(0)">
+            <img src="/images2/icon-goback.png" />
+            返回
+        </a>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="tab tab-date-type left-bar">
+                    <li id="year">年</li>
+                    <li id="month" class="active">月</li>
+                    <li id="day">日</li>
+                </ul>
+                <div class="reportbar date-title-bar" style="clear:both;">
+                    <a href="javascript:void(0)" class="pre-next pre" id="pre">
+                        <cite></cite>
+                        <i>前一月</i>
+                    </a>
+                    <a href="javascript:void(0)" class="title" id="title">
+                    </a>
+                    <a href="javascript:void(0)" class="pre-next next" id="next">
+                        <i>后一月</i>
+                        <cite></cite>
+                    </a>
+                </div>
+            </div>
+            <!--<div class="content-body" style="border: none; margin-left: 1%; margin-right: 1%; margin-top: 0.2rem; font-size: 0.2rem; ">
+                <div id="table_container" class="table-container" style="width: 100%; text-align: center; margin-left: auto; margin-right:auto;">
+                    <table id="consume_detail" style="width:100%"></table>
+                </div>
+            </div>-->
+            <div id="table_container" class="table-container" style="width: 100%; text-align: center; margin-top: 0.2rem; margin-left: auto; margin-right:auto;">
+                <table id="consume_detail" style="width:100%"></table>
+            </div>
+            <div id="chart1" style="height:5rem;width:16.5rem;border:solid 0px lightgreen;position:relative;top:-1.2rem;">
+            </div>
+        </div>
+    </div>
+
+    <div class="window window-date window-month">
+        <div class="window-body">
+            <div class="sub sub-year">
+                <div class="sub-title">年<img src="/images2/bg-triangle.png" /></div>
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-month">
+                <div class="sub-title">月<img src="/images2/bg-triangle.png" /></div>
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <div class="sub-title">日<img src="/images2/bg-triangle.png" /></div>
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel button-last">取消</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/dst.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="/js/common/tpReport.js"></script>
+    <script src="consume-detail-to-jump.js"></script>
+</body>
+</html>

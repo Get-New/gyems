@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="/css/style2.css" rel="stylesheet" />
+    <style>
+        .top-bar { margin-top: 0.1rem; }
+        #goback { margin-left: 2%; font-size: 0.1866rem; z-index: 1; color: #267572; font-family: 'Microsoft YaHei'; }
+        #goback img { width: 0.35rem; height: 0.35rem; margin-bottom: -0.12rem; }
+        .line1 { margin-left: 2%; margin-right: 2%; margin-top: 0.1rem; font-size: 0.1866rem; line-height: 0.3rem; height: 0.3rem; text-align: center; background-color: #F1F6F4; border-left: solid 1px #ccc; border-top: solid 1px #ccc; border-right: solid 1px #ccc; }
+        .table-container { margin: 0 2%; }
+        .table-container table { width: 100%; }
+        .table-container tr { height:0.3rem; }
+        .table-container th { line-height: 0.3rem; }
+        .table-container td { line-height: 0.3rem; }
+        .echart-container { margin-left: 2%; margin-right: 2%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; height: 4rem; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="javascript:void(0)" id="goback">
+            <img src="/images2/icon-goback.png" />
+            返回
+        </a>
+    </div>
+    <div class="line1">
+        锅炉效率：97.46
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>项目</th>
+                <th>单位</th>
+                <th>当前值</th>
+                <th>标准值</th>
+                <th>上限</th>
+                <th>下限</th>
+            </tr>
+            <tr>
+                <td>蒸汽温度</td>
+                <td>℃</td>
+                <td>537.03</td>
+                <td>540</td>
+                <td>550</td>
+                <td>520</td>
+            </tr>
+            <tr>
+                <td>蒸汽压力</td>
+                <td>Mpa</td>
+                <td>9.43</td>
+                <td>9.8</td>
+                <td>10</td>
+                <td>8.8</td>
+            </tr>
+            <tr>
+                <td>给水温度</td>
+                <td>℃</td>
+                <td>213.53</td>
+                <td>215</td>
+                <td>225</td>
+                <td>190</td>
+            </tr>
+            <tr>
+                <td>给水压力</td>
+                <td>Mpa</td>
+                <td>12.56</td>
+                <td>13</td>
+                <td>15</td>
+                <td>12.5</td>
+            </tr>
+            <tr>
+                <td>蒸汽总流量</td>
+                <td>t</td>
+                <td>141,530.50</td>
+                <td>210</td>
+                <td>220</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>焦炉煤气总流量</td>
+                <td>立方米</td>
+                <td>281,893.25</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>高炉煤气总流量</td>
+                <td>万立方米</td>
+                <td>5,554.48</td>
+                <td>16</td>
+                <td>18</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>转炉煤气总流量</td>
+                <td>万立方米</td>
+                <td>3,096.59</td>
+                <td>1.5</td>
+                <td>2</td>
+                <td>1.2</td>
+            </tr>
+        </table>
+    </div>
+    <div class="echart-container" id="echt"></div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="../../../../js/common/echarts.common.min.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="targetdetail.js"></script>
+</body>
+</html>

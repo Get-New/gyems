@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户管理</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="textli"><input id="search-name" type="text" class="search-condition" placeholder="请输入用户名" onfocus="this.placeholder = ''" onblur="this.placeholder = '请输入用户名'" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                    <li class="button reset" id="reset">重置密码</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input id="UserId" name="UserId" type="hidden" />
+                    <input id="RoleIdList" name="RoleIdList" type="hidden" />
+                    <input id="PositionIdList" name="PositionIdList" type="hidden" />
+                    <input id="PositionIdList" name="FiledirIdList" type="hidden" />
+                    <ul class="length6">
+                        <li><label>用户名</label><input id="UserName" name="UserName" type="text" /></li>
+                        <li><label>所属部门</label><select id="InstitutionId" name="InstitutionId"></select></li>
+                        <li><label>数据节点分组</label><select id="PositionId" name="PositionId"></select></li>
+                        <li><label>文档权限分组</label><select id="FiledirId" name="FiledirId"></select></li>
+                        <li class="checkbox-panel">
+                            <label>菜单权限分组</label>
+                            <ul id="roles"></ul>
+                        </li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>

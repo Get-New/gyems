@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>弹出框模板</title>
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <style>
+        .main-content .content-body { height:7.7rem;}
+        .window { width: 9rem; height: 6.5rem; display:block; margin-left:-9999px;}
+        .window.open { margin-left:0;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-body">
+                <a href="javascript:void(0)" id="clickme">click me !!!</a>
+            </div> 
+        </div>
+    </div>
+
+
+    <div class="window" id="window">
+        <div class="window-title" id="window-head">
+            弹出窗<a class="window-close"><img src="/images2/icon-close.png" /></a>
+        </div>
+        <div class="window-body">
+            <div class="echart-container" id="chart1">
+            </div>
+            <div class="buttons">
+                <span class="button window-cancel">关闭</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/tpReport.js"></script>
+    <script src="/js/common/mywin.js"></script>
+    <script src="tpwindow.js"></script>
+</body>
+</html>

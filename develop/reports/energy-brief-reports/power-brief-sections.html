@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>电力-各车间用量</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link href="/css/style-zhax.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head" style="display: inline-block; margin-left: 1%; margin-right: 1%;">
+                <ul class="topbar">
+                    <li class="textli">
+                        <label>时间：</label>
+                        <input type="text" style="width:4rem" class="search-condition datetime" id="search-sdate" />
+                    </li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <!--<li class="button" id="export">导出Excel</li>-->
+                </ul>
+            </div>
+            <div class="content-body" style="border: none; margin-left: 1%; margin-right: 1%; margin-top: 0.2rem; font-size: 0.2rem; ">
+                <div id="table_container" class="table-container" style="width: 100%; text-align: center; margin-left: auto; margin-right:auto;">
+                    <table id="table1" style="width:100%">
+                        <tr>
+                            <th rowspan="1" colspan="7">电力供应 （单位：kwh）</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">序号</th>
+                            <th rowspan="2" colspan="1">名称</th>
+                            <th rowspan="1" colspan="3" id="date_title1"></th>
+                            <th rowspan="1" colspan="2" id="date_title2"></th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">电量</th>
+                            <th rowspan="1" colspan="1">上月比较（%）</th>
+                            <th rowspan="1" colspan="1">同期比较（%）</th>
+                            <th rowspan="1" colspan="1">电量</th>
+                            <th rowspan="1" colspan="1">同期比较（%）</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1" style="width:1rem;">1</th>
+                            <th rowspan="1" colspan="1" style="width:1rem;">贵冶1#进线</th>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">2</th>
+                            <th rowspan="1" colspan="1">贵冶2#进线</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">3</th>
+                            <th rowspan="1" colspan="1">贵冶3#进线</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">4</th>
+                            <th rowspan="1" colspan="1">贵冶4#进线</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">5</th>
+                            <th rowspan="1" colspan="1">进线小计</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">6</th>
+                            <th rowspan="1" colspan="1">发电小计</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">7</th>
+                            <th rowspan="1" colspan="1">合计</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                    </table>
+
+                    <table id="table2" style="width:100%;margin-top:0.1rem;">
+                        <tr>
+                            <th rowspan="1" colspan="7">电力消耗 （单位：kwh）</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" colspan="1">序号</th>
+                            <th rowspan="2" colspan="1">名称</th>
+                            <th rowspan="1" colspan="3" id="date_title3"></th>
+                            <th rowspan="1" colspan="2" id="date_title4"></th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">电量</th>
+                            <th rowspan="1" colspan="1">上月比较（%）</th>
+                            <th rowspan="1" colspan="1">同期比较（%）</th>
+                            <th rowspan="1" colspan="1">电量</th>
+                            <th rowspan="1" colspan="1">同期比较（%）</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1" style="width:1rem;">1</th>
+                            <th rowspan="1" colspan="1" style="width:1rem;">倾动炉车间</th>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                            <td rowspan="1" colspan="1" style="width:1rem;">></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">2</th>
+                            <th rowspan="1" colspan="1">冶化工程公司</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">3</th>
+                            <th rowspan="1" colspan="1">动力车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">4</th>
+                            <th rowspan="1" colspan="1">备料车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">5</th>
+                            <th rowspan="1" colspan="1">新产业公司</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">6</th>
+                            <th rowspan="1" colspan="1">新材料车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">7</th>
+                            <th rowspan="1" colspan="1">熔炼车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">8</th>
+                            <th rowspan="1" colspan="1">电解车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">9</th>
+                            <th rowspan="1" colspan="1">硫酸车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">10</th>
+                            <th rowspan="1" colspan="1">选矿车间</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">11</th>
+                            <th rowspan="1" colspan="1">铜材公司</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="1" colspan="1">12</th>
+                            <th rowspan="1" colspan="1">合计</th>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                            <td rowspan="1" colspan="1"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <!--<script src="/js/common/my-right-panel.js"></script>-->
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <!--<script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>-->
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="power-brief-sections.js"></script>
+</body>
+</html>

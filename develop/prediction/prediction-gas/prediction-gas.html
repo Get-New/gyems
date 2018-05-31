@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>天然气预测</title>
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <ul class="cvs"></ul>
+            <div class="hr" style="clear:both;"></div>
+            <div class="content-head">
+                <ul class="tab tab-date-type left-bar">
+                    <li id="history">年</li>
+                    <li id="year">月</li>
+                    <li id="month" class="active">日</li>
+                </ul>
+                <ul class="right-bar report-op">
+                    <li id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="reportbar date-title-bar" style="clear:both;">
+                <a href="javascript:void(0)" class="pre-next pre" id="pre">
+                    <cite></cite>
+                    <i>前一年</i>
+                </a>
+                <a href="javascript:void(0)" class="title" id="title">
+                </a>
+                <a href="javascript:void(0)" class="pre-next next" id="next">
+                    <i>后一年</i>
+                    <cite></cite>
+                </a>
+            </div>
+            <div hidden class="table-container" style="border:solid 0px lightblue;padding:0.1rem; height: 0.95rem; width: 99%; text-align: center; margin-left: auto; margin-right:auto; overflow:auto;">
+                <table id="table_consumption" name="" style="width:96%;border:solid 1px lightgrey;">
+                    <tr>
+                        <th rowspan="1" colspan="1" style="font-size:16px;">全年预测值</th>
+                        <th rowspan="1" colspan="1" style="font-size:16px;">全年实际值</th>
+                        <th rowspan="1" colspan="1" style="font-size:16px;">偏差（%）</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1" style="font-size:16px;"></td>
+                        <td rowspan="1" colspan="1" style="font-size:16px;"></td>
+                        <td rowspan="1" colspan="1" style="font-size:16px;"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="echart-container" id="chart1">
+            </div>
+        </div>
+    </div>
+
+    <div class="window window-date window-month">
+        <div class="window-body">
+            <div class="sub sub-year">
+                <div class="sub-title">年<img src="/images2/bg-triangle.png" /></div>
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-month">
+                <div class="sub-title">月<img src="/images2/bg-triangle.png" /></div>
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <div class="sub-title">日<img src="/images2/bg-triangle.png" /></div>
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel button-last">取消</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/dst.js"></script>
+    <script src="/js/common/tpReport.js"></script>
+    <script src="/develop/reports/mock_data_zrd.js"></script>
+    <script src="prediction-gas.js"></script>
+</body>
+</html>

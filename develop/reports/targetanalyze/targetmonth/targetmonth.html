@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-size:0;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .top-bar { margin-top: 0.1rem; margin-bottom: 0.1rem; }
+        #goback { margin-left: 2%; font-size: 0.1866rem; z-index: 1; color: #267572; font-family: 'Microsoft YaHei'; }
+        #goback img { width: 0.35rem; height: 0.35rem; margin-bottom: -0.12rem; }
+
+        .main-content .content-body { border: none; }
+
+        #echt { border: solid 1px #ccc; width: 100%; height: 100%; }
+        .texts { z-index: 900; width: 2rem; height: 0.5rem; border: solid 1px #ccc; position: relative; }
+
+        .texts1 { z-index: 900; width: 2rem; height: 0.5rem;  position: relative; bottom: 3.2rem; left: 7rem; }
+        .texts2 { z-index: 900; width: 2rem; height: 0.5rem;  position: relative; bottom: 2rem; left: 3rem; }
+        .texts3 { z-index: 900; width: 2rem; height: 0.5rem;  position: relative; bottom: 2.53rem; left: 7rem; }
+        .texts4 { z-index: 900; width: 2rem; height: 0.5rem;  position: relative; bottom: 3.06rem; left: 12rem; }
+        .texts5 { z-index: 900; width: 2rem; height: 0.5rem;  position: relative; bottom: 2.3rem; left: 7rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <a href="javascript:void(0)" id="goback">
+                <img src="/images2/icon-goback.png" />
+                返回
+            </a>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li><label>时间起：</label><input type="text" class="datetime" onclick="laydatetime()"></li>
+                    <li><label>时间止：</label><input type="text" class="datetime" onclick="laydatetime()"></li>
+                    <li class="button add" id="query"><img src="/images2/icon-btn-add.png" />查询</li>
+                    <li class="button" id="query">天级指标分析</li>
+                    <li class="button" id="query">指标专家分析</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div id="echt"></div>
+                <div class="texts1" id="11">标准运行区间</div>
+                <div class="texts2" id="12">2014年</div>
+                <div class="texts3" id="13">2015年</div>
+                <div class="texts4" id="14">2016年</div>
+                <div class="texts5" id="15">月份(M)</div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="../../../../js/common/echarts.common.min.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="targetmonth.js"></script>
+</body>
+</html>

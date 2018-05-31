@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="overview.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="panel left-panel-top" id="consume">
+            <div class="header">
+                <div class="left"><img src="/images2/consume_icon.png" />总消耗</div>
+                <a href="javascript:void(0)" title="查看更多"><img src="/images2/end_enlarge.png" /></a>
+            </div>
+            <ul>
+                <li>
+                    <img src="/images2/consume_bg.png" />
+                    <div class="title">日累计</div>
+                    <div class="value" id="consume_Day" style="color:#f79897;"></div>
+                    <div class="unit">tce</div>
+                </li>
+                <li>
+                    <img src="/images2/consume_bg.png" />
+                    <div class="title">月累计</div>
+                    <div class="value" id="consume_Month" style="color:#f3c37c;"></div>
+                    <div class="unit">tce</div>
+                </li>
+                <li>
+                    <img src="/images2/consume_bg.png" />
+                    <div class="title">年累计</div>
+                    <div class="value" id="consume_Year" style="color:#81bda9;"></div>
+                    <div class="unit">tce</div>
+                </li>
+            </ul>
+        </div>
+        <div class="panel left-panel-middle" id="index">
+            <div class="header">
+                <div class="left"><img src="/images2/index_icon.png" />能源指标</div>
+                <div class="right">
+                    <a href="javascript:void(0)" title="查看更多"><img src="/images2/end_enlarge.png" /></a>
+                    <div class="cycle-button" condition="Year">年</div>
+                    <div class="cycle-button active" condition="Month">月</div>
+                    <div class="cycle-button" condition="Day">日</div>
+                </div>
+            </div>
+            <div id="index-chart"></div>
+        </div>
+        <div class="panel left-panel-bottom" id="rank">
+            <div class="header">
+                <div class="left"><img src="/images2/rank_icon.png" />用能排行</div>
+                <div class="right">
+                    <a href="javascript:void(0)" title="查看更多"><img src="/images2/end_enlarge.png" /></a>
+                    <div class="cycle-button" condition="Year">年</div>
+                    <div class="cycle-button active" condition="Month">月</div>
+                    <div class="cycle-button" condition="Day">日</div>
+                    <div class="type-button" condition="Energy">介质</div>
+                    <div class="type-button active" condition="Dept">部门</div>
+                </div>
+            </div>
+            <ul class="rank_list">
+                <!--<li>
+                    <img id="rank_circle" src="/images2/rank_circle.png" />
+                    <span class="rank">1</span>
+                    <img class="rank_bar" id="rank_bar1" src="/images2/rank_bar1.png" />
+                    <span class="rank_name">备料车间</span>
+                    <span class="rank_value" id="rank_value1">XXXX.XX</span>
+                </li>-->
+            </ul>
+        </div>
+        <div class="panel middle-panel-top" id="">
+            <div class="alarm-list-wrapper">
+                <ul class="list-wrapper"></ul>
+            </div>
+            <div class="slider-more">更多>></div>
+            <div class="slider-pre"></div>
+            <div class="slider-next"></div>
+            <div class="alarm-bottom">
+                <ul class="bottom-slider"></ul>
+            </div>
+            <!--<div class="message-panel div1">
+                <div class="icon" style="background-color:#f3c37c;"><img src="/images2/error_icon.png" />能源异常</div>
+                <div class="text" id="error"></div>
+                <div class="icon" style="background-color:#d4b4d9;"><img src="/images2/analysis_icon.png" />原因分析</div>
+                <div class="text" id="analysis"></div>
+                <div class="icon" style="background-color:#9bc8d6;"><img src="/images2/advice_icon.png" />处理建议</div>
+                <div class="text" id="advice"></div>
+            </div>
+            <div class="message-panel div2">
+                <div class="icon" style="background-color:#f3c37c;"><img src="/images2/error_icon.png" />能源异常</div>
+                <div class="text" id="error"></div>
+                <div class="icon" style="background-color:#d4b4d9;"><img src="/images2/analysis_icon.png" />原因分析</div>
+                <div class="text" id="analysis"></div>
+                <div class="icon" style="background-color:#9bc8d6;"><img src="/images2/advice_icon.png" />处理建议</div>
+                <div class="text" id="advice"></div>
+            </div>
+            <div class="message-panel div3">
+                <div class="icon" style="background-color:#f3c37c;"><img src="/images2/error_icon.png" />能源异常</div>
+                <div class="text" id="error"></div>
+                <div class="icon" style="background-color:#d4b4d9;"><img src="/images2/analysis_icon.png" />原因分析</div>
+                <div class="text" id="analysis"></div>
+                <div class="icon" style="background-color:#9bc8d6;"><img src="/images2/advice_icon.png" />处理建议</div>
+                <div class="text" id="advice"></div>
+            </div>-->
+        </div>
+        <div class="panel middle-panel-bottom" id="flow">
+            <div class="header">
+                <ul class="left-title">
+                    <!--<li class="energy-button click" id="gas" energymediumid="1d22868d659ed3bA27bc86aa">天然气</li>
+                    <li class="energy-button" id="ele" energymediumid="1d22868c6ca69b8A27bc86aa">电力</li>-->
+                </ul>
+                <div class="right-title">
+                    <div class="net-button"><img src="/images2/net_icon.png" />管网图</div>
+                </div>
+            </div>
+            <div class="left-content">
+                <div id="goback" class="hide">
+                    <img src="/images2/icon-goback.png" />
+                    返回
+                </div>
+                <ul class="factoy-list-in"></ul>
+                <!--<span class="total-text">购入量</span>
+                <img id="icon" src="/images2/start-icon.png" />
+                <span class="total-buy"></span>
+                <div class="arrow1"></div>
+                <div class="box">
+                    <div class="box-head"><img id="box-img" src="/images2/total_icon.png" /><span></span></div>
+                    <ul class="data-list">
+                        <li>
+                            <span class="item-text">流量&nbsp</span>
+                            <span class="item-value flow">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">日累计&nbsp</span>
+                            <span class="item-value day">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">月累计&nbsp</span>
+                            <span class="item-value month">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">年累计&nbsp</span>
+                            <span class="item-value year">--</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="arrow2"></div>
+                <div class="sub sub-buy">
+                    <span class="sub-text">误差&nbsp</span>
+                    <span class="sub-value">--</span>
+                </div>
+                <div class="sub sub-user">
+                    <span class="sub-text">误差&nbsp</span>
+                    <span class="sub-value">--</span>
+                </div>-->
+            </div>
+            <div class="middle-content">
+                <div class="arrow1"></div>
+                <div class="box total-in">
+                    <div class="box-head"><img id="box-img" src="/images2/total_icon.png" /><span>输入总量</span></div>
+                    <ul class="data-list">
+                        <li>
+                            <span class="item-text">实时&nbsp</span>
+                            <span class="item-value flow">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">日累&nbsp</span>
+                            <span class="item-value day">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">月累&nbsp</span>
+                            <span class="item-value month">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">年累&nbsp</span>
+                            <span class="item-value year">--</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box total-sub">
+                    <div class="box-head"><img id="box-img" src="/images2/total_icon.png" /><span>偏差量</span></div>
+                    <ul class="data-list">
+                        <li>
+                            <span class="item-text">实时&nbsp</span>
+                            <span class="item-value flow">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">日累&nbsp</span>
+                            <span class="item-value day">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">月累&nbsp</span>
+                            <span class="item-value month">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">年累&nbsp</span>
+                            <span class="item-value year">--</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="arrow2"></div>
+                <div class="box total-out">
+                    <div class="box-head"><img id="box-img" src="/images2/total_icon.png" /><span>输出总量</span></div>
+                    <ul class="data-list">
+                        <li>
+                            <span class="item-text">实时&nbsp</span>
+                            <span class="item-value flow">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">日累&nbsp</span>
+                            <span class="item-value day">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">月累&nbsp</span>
+                            <span class="item-value month">--</span>
+                        </li>
+                        <li class="hide">
+                            <span class="item-text">年累&nbsp</span>
+                            <span class="item-value year">--</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="arrow3"></div>
+            </div>
+            <div class="right-content">
+                <ul class="factoy-list-out">
+                    <!--<li id="factory-item">
+                        <div class="arrow"></div>
+                        <div class="box">
+                            <div class="box-head"><img id="box-img" src="/images2/factory_icon.png" /><span>电解车间</span></div>
+                            <ul class="data-list">
+                                <li>
+                                    <span class="item-text">流量&nbsp</span>
+                                    <span class="item-value">XXXX</span>
+                                </li>
+                                <li class="hide">
+                                    <span class="item-text">日累计&nbsp</span>
+                                    <span class="item-value">XXXX</span>
+                                </li>
+                                <li class="hide">
+                                    <span class="item-text">月累计&nbsp</span>
+                                    <span class="item-value">XXXX</span>
+                                </li>
+                                <li class="hide">
+                                    <span class="item-text">年累计&nbsp</span>
+                                    <span class="item-value">XXXX</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sub">
+                            <span class="sub-text">误差&nbsp</span>
+                            <span class="sub-value">XXXX</span>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="panel right-panel-top" id="cost">
+            <div class="header">
+                <div class="left"><img src="/images2/cost_icon.png" />用能成本</div>
+                <div class="right">
+                    <a href="javascript:void(0)" title="查看更多"><img src="/images2/end_enlarge.png" /></a>
+                    <div class="cycle-button" condition="Year">年</div>
+                    <div class="cycle-button active" condition="Month">月</div>
+                    <div class="cycle-button" condition="Day">日</div>
+                    <div class="type-button" condition="Energy">介质</div>
+                    <div class="type-button active" condition="Dept">部门</div>
+                </div>
+            </div>
+            <div id="cost-chart"></div>
+        </div>
+        <div class="panel right-panel-middle" id="predict">
+            <div class="header">
+                <div class="left"><img src="/images2/predict_icon.png" />能耗预测</div>
+                <div class="right">
+                    <a href="javascript:void(0)" title="查看更多"><img src="/images2/end_enlarge.png" /></a>
+                    <div class="cycle-button" condition="Year">年</div>
+                    <div class="cycle-button active" condition="Month">月</div>
+                    <div class="cycle-button" condition="Day">日</div>
+                </div>
+            </div>
+            <!--<div id="predict-chart"></div>-->
+            <ul class="predict_list"></ul>
+        </div>
+        <div class="panel right-panel-bottom" id="balance">
+            <div class="header">
+                <div class="left"><img src="/images2/balance_icon.png" />能源平衡</div>
+                <div class="right">
+                    <a href="javascript:void(0)" title="查看更多"><img src="/images2/end_enlarge.png" /></a>
+                    <div class="cycle-button" condition="Year">年</div>
+                    <div class="cycle-button active" condition="Month">月</div>
+                    <div class="cycle-button" condition="Day">日</div>
+                </div>
+            </div>
+            <ul>
+                <!--<li>
+                    <div class="label">水</div>
+                    <img id="bg" src="/images2/balance_bar.png" />
+                    <div class="left">供给</div>
+                    <img id="cursor_left" src="/images2/left_cursor.png" />
+                    <div class="right">消耗</div>
+                </li>
+                <li>
+                    <div class="label">电</div>
+                    <img id="bg" src="/images2/balance_bar.png" />
+                    <div class="left">供给</div>
+                    <img id="cursor_balance" src="/images2/balance_cursor.png" />
+                    <div class="right">消耗</div>
+                </li>
+                <li>
+                    <div class="label">气</div>
+                    <img id="bg" src="/images2/balance_bar.png" />
+                    <div class="left">供给</div>
+                    <img id="cursor_right" src="/images2/right_cursor.png" />
+                    <div class="right">消耗</div>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="opacity-div-for-modelwin"></div>
+    <div class="window" id="window">
+        <div class="window-title" id="window-head">
+            <h3 style="font-size:18px;text-align:center;"></h3>
+        </div>
+        <div class="window-body">
+            <div class="echart-container" id="window_chart1">
+            </div>
+        </div>
+    </div>
+    <div class="rightmenu hide">
+        <ul class="menuson"></ul>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/require-2.1.11.js" data-main="/develop/overview/page"></script>
+</body>
+</html>

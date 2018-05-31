@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>综合统计--能源平衡配置</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">                  
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                    <li class="button export" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="MeasurePropertyId" id="MeasurePropertyId" />
+                    <input type="hidden" name="Ratios" id="Ratios" />
+                    <input type="hidden" name="ModelBaseId" id="ModelBaseId" />
+                    <input type="hidden" name="EnergyMediumId" id="EnergyMediumId" />                    
+                    <ul class="length4">
+                        <li class="radios">
+                            <label>平衡方法</label>
+                            <input type="radio" name="EnergyBlanceMethod" value="1"  checked="checked" />平摊
+                            <input type="radio" name="EnergyBlanceMethod" value="2" />比例
+                            <input type="radio" name="EnergyBlanceMethod" value="3" />手动
+                        </li>
+                        <li class="inline-grid" id="radio-inline-grid">
+                            <div id="radio-show">
+                                <div class="grid-container row-edit-grid" id="radio-grid-container1">
+                                </div>
+                                <div class="grid-container row-edit-grid" id="radio-grid-container2">
+                                </div>
+                                <div class="grid-container row-edit-grid" id="radio-grid-container3">
+                                </div>
+                            </div>
+                            <div id="radio-hide">                                
+                                
+                            </div>                            
+                        </li>                       
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-edit" id="submit-edit"></span>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="energy-measure-property.js"></script>
+</body>
+</html>

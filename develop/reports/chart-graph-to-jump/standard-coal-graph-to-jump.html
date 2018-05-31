@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>折标煤</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="goback" id="goback" style="display:none;">
+        <a href="javascript:void(0)">
+            <img src="/images2/icon-goback.png" />
+            返回
+        </a>
+    </div>
+    <div class="container">
+        <div class="tree-selector" style="position:relative;float:left">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body" style="position:absolute;width:2.17rem">
+                <!--<span id="refresh"></span>-->
+                <!--<span id="spin"></span>-->
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content" style="clear:left">
+            <ul class="cvs"></ul>
+            <div class="hr" style="clear:both;"></div>
+            <div class="content-head">
+                <ul class="tab tab-date-type left-bar">
+                    <li id="history">年</li>
+                    <li id="year">月</li>
+                    <li id="month" class="active">日</li>
+                    <!--<li id="day">时</li>-->
+                </ul>
+                <div class="reportbar date-title-bar" style="clear:both;">
+                    <a href="javascript:void(0)" class="pre-next pre" id="pre">
+                        <cite></cite>
+                        <i>前一月</i>
+                    </a>
+                    <a href="javascript:void(0)" class="title" id="title">
+                    </a>
+                    <a href="javascript:void(0)" class="pre-next next" id="next">
+                        <i>后一月</i>
+                        <cite></cite>
+                    </a>
+                </div>
+                <ul class="right-bar report-op">
+                    <li id="export">导出Excel</li>
+                    <li id="show-grid">显示表格</li>
+                </ul>
+            </div>
+
+            <div class="echart-container" id="chart1" style="height:5.5rem;border:solid 1px lightgrey;">
+            </div>
+            <!--表格区域-->
+            <div class="echart-container" id="for-grid" style="display:none;height:6.1rem;border:solid 1px lightgrey;margin-top:0.1rem;">
+                <div class="grid-container" id="grid1"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window window-date window-month">
+        <div class="window-body">
+            <div class="sub sub-year">
+                <div class="sub-title">年<img src="/images2/bg-triangle.png" /></div>
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-month">
+                <div class="sub-title">月<img src="/images2/bg-triangle.png" /></div>
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <div class="sub-title">日<img src="/images2/bg-triangle.png" /></div>
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel button-last">取消</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/dst.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="/js/common/tpReport.js"></script>
+    <script src="standard-coal-graph-to-jump.js"></script>
+</body>
+</html>

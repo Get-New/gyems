@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>图表配置-图表名称-首页流向图2.0</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/style-zrd.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="textli"><input id="search-name" class="search-condition" placeholder="输入图表名称进行查询" onfocus="this.placeholder = ''" onblur="    this.placeholder = '输入图表名称进行查询'" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <!--<div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="ConfigID" id="ConfigID" />
+                    <input type="hidden" name="DescriptionInfo" id="DescriptionInfo" />
+                    <ul class="length6">
+                        <li><label>图表名称</label><input type="text" id="ConfigReportName" name="ConfigReportName" /></li>
+                        <li><label>排序</label><input type="text" id="BusinessSort" name="BusinessSort" /></li>
+                        <!--<li><label>菜单页面</label><a href="javascript:void(0)" id="edit_MenuName"><input id="MenuName" name="MenuName" readonly="readonly" /></a></li>-->
+                        <!--<li><label>页面ID</label><a href="javascript:void(0)" id="edit_MenuID"><input id="MenuID" name="MenuID" readonly="readonly" /></a></li>-->
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window Chart_Config_Menu_Window">
+        <div id="for_tree">
+            <div class="tree">
+            </div>
+        </div>
+        <div class="buttons table-container" id="for_show">
+            <table style="width:99%;margin-top:0.8rem;border:solid 1px lightblue;">
+                <tr>
+                    <th colspan="1" style="height:0.6rem;">菜单页面名称</th>
+                </tr>
+                <tr>
+                    <td colspan="1" id="MenuName_W" style="height:0.6rem;"></td>
+                </tr>
+            </table>
+            <table style="width:99%;margin-top:0.6rem;border:solid 1px lightblue;">
+                <tr>
+                    <th colspan="1" style="height:0.6rem;">页面ID</th>
+                </tr>
+                <tr>
+                    <td colspan="1" id="MenuID_W" style="height:0.6rem;"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="buttons" id="for_bar">
+            <span class="button window-save" id="window-save">保存</span>
+            <span class="button window-cancel" id="window-cancel">取消</span>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="chart-config-name-overview-graph-2.0.js"></script>
+</body>
+</html>

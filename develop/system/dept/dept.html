@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-size:0;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>系统管理--部门管理</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body> 
+    <div class="container">
+        <div class="fixable treef">
+            <div class="head">
+                <span class="current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="content">
+                <div class="refresh icon-btn">
+                    <img src="/images2/icon-b-refresh.png" />
+                </div>
+                <div class="fix icon-btn">
+                    <img src="/images2/icon-b-spin.png" class="spin" />
+                    <img src="/images2/icon-b-spinning.png" class="spinning" />
+                </div>
+                <div class="inner tree"></div>
+            </div>
+        </div>
+        <div class="main-content mc-tree-notfix">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                    <li class="button" id="testTab">测试tab</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input id="InstitutionId" name="InstitutionId" type="hidden" />
+                    <input id="ParentId" name="ParentId" type="hidden" />
+                    <input id="InstitutionLevel" name="InstitutionLevel" type="hidden" />
+                    <ul class="length4">
+                        <li><label>部门名称</label><input id="InstitutionName" name="InstitutionName" type="text" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-fix-tree.js"></script>
+    <!--<script src="/js/common/my-tree.js"></script>-->
+    <script src="dept.js"></script>
+</body>
+</html>

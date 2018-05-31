@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>能源流向图</title>
+    <link href="../common_n/energyImage.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="panel" id="div1">
+        <div class="box box1 box-master" id="box1a">
+			<div class="inner" boxId="1d254e89a3dfb71A27bc86aa" level="1">
+				<img class="icon" src="/images2/flow-icon3.png" />
+				<div class="title">1#总降</div>
+				<div class="sub wsub">
+					<span class="sub-name">有功功率:</span>
+					<span class="sub-value"></span>
+				</div>
+				<div class="sub ksub">
+					<span class="sub-name">功率因数:</span>
+					<span class="sub-value"></span>
+				</div>
+			</div>
+            <div class="arrow">
+                <div class="arrow-strip"></div>
+                <img src="/images2/flow-arrow.png" />
+            </div>
+        </div>
+        <div class="box box2 box-master" id="box1b">
+			<div class="inner" boxid="1d254e9ea71c638A27bc86aa" level="1">
+				<img class="icon" src="/images2/flow-icon2.png" />
+				<div class="title">1#透平发电机</div>
+				<div class="sub wsub">
+					<span class="sub-name">有功功率:</span>
+					<span class="sub-value"></span>
+				</div>
+				<div class="sub ksub">
+					<span class="sub-name">功率因数:</span>
+					<span class="sub-value"></span>
+				</div>
+			</div>
+            <div class="arrow">
+                <div class="arrow-strip"></div>
+                <img src="/images2/flow-arrow.png" />
+            </div>
+        </div>
+        <div class="bar"></div>
+    </div>
+    <div class="panel" id="div2">
+        <div class="box box1 box-master" id="box2a">
+			<div class="inner" boxid="1d255b48d1b648bA27bc86aa" level="1">
+				<img class="icon" src="/images2/flow-icon3.png" />
+				<div class="title">2#总降</div>
+				<div class="sub wsub">
+					<span class="sub-name">有功功率:</span>
+					<span class="sub-value"></span>
+				</div>
+				<div class="sub ksub">
+					<span class="sub-name">功率因数:</span>
+					<span class="sub-value"></span>
+				</div>
+			</div>
+            <div class="arrow">
+                <div class="arrow-strip"></div>
+                <img src="/images2/flow-arrow.png" />
+            </div>
+        </div>
+        <div class="box box2 box-master" id="box2b">
+			<div class="inner" boxid="1d255b6717eff92A27bc86aa" level="1">
+				<img class="icon" src="/images2/flow-icon2.png" />
+				<div class="title">2#透平发电机</div>
+				<div class="sub wsub">
+					<span class="sub-name">有功功率:</span>
+					<span class="sub-value"></span>
+				</div>
+				<div class="sub ksub">
+					<span class="sub-name">功率因数:</span>
+					<span class="sub-value"></span>
+				</div>
+			</div>
+            <div class="arrow">
+                <div class="arrow-strip"></div>
+                <img src="/images2/flow-arrow.png" />
+            </div>
+        </div>
+        <div class="bar"></div>
+    </div>
+	<div class="window" id="window">
+		<div class="window-title" id="window-head">
+			<!--<a class="window-close"><img src="/images2/icon-close.png" /></a>-->
+			<h3 style="font-size:18px;text-align:center;"></h3>
+		</div>
+		<div class="window-body">
+			<div class="echart-container" id="window_chart1">
+			</div>
+			<div class="window_buttom" id="window_buttom">
+				<div class="button1" id="interval-enlarge"></div>
+				<div class="button1" id="interval-reduce"></div>
+				<div class="time-interval" id="time-interval" style="font-size:16px;text-align:center;line-height:26px;"></div>
+				<div class="button1" id="end-reduce"></div>
+				<div class="button1" id="end-enlarge"></div>
+				<div class="button1" id="reset"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="rightmenu hide" style="">
+		<ul class="menuson"></ul>
+	</div>
+	<script src="/js/common/rem.js"></script>
+	<script src="/js/common/jquery-1.12.4.js"></script>
+	<script src="/js/common/lodash-3.10.1.js"></script>
+	<script src="/lib/spin/spin.js"></script>
+	<script src="/lib/laydate/laydate.dev.js"></script>
+	<script src="/js/common/echarts.common.min.js"></script>
+	<script src="/js/common/dst.js"></script>
+	<script src="/js/common/tpReport.js"></script>
+	<script src="/js/common/mywin.js"></script>
+	<script src="/develop/reports/mock_data_zrd.js"></script>
+    <script src="../common_n/energyImageLib.js"></script>
+    <script src="energyImage.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用能概览</title>
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="tab tab-date-type left-bar">
+                    <!--<li id="history">历年</li>-->
+                    <li id="year">年</li>
+                    <li id="month" class="active">月</li>
+                    <!--<li id="day">时</li>-->
+                    <li>
+                        <a href="javascript:void(0)" class="pre-next pre" id="pre">
+                            <cite></cite>
+                            <i>前一年</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="pre-next next" id="next">
+                            <i>后一年</i>
+                            <cite></cite>
+                        </a>
+                    </li>
+                </ul>
+                <!--<ul class="right-bar report-op">
+                    <li id="export">导出Excel</li>
+                </ul>-->
+            </div>
+            <div class="reportbar date-title-bar" style="clear:both;">
+                <!--<a href="javascript:void(0)" class="pre-next pre" id="pre">
+                    <cite></cite>
+                    <i>前一年</i>
+                </a>-->
+                <a href="javascript:void(0)" class="title" id="title">
+                </a>
+                <!--<a href="javascript:void(0)" class="pre-next next" id="next">
+                    <i>后一年</i>
+                    <cite></cite>
+                </a>-->
+            </div>
+            <div class="table-container" style="border:solid 1px lightblue;padding:0.2rem; height: 6.2rem; width: 98%; text-align: center; margin-left: auto; margin-right:auto; overflow:auto;">
+                <div id="title_1" style="height:0.5rem;width:99%;font-size:16px;font-weight:bold;line-height:0.5rem;text-align:center;margin-top:0.0rem;border:solid 1px lightgrey;border-bottom:initial;">
+                    智能决策参考信息
+                </div>
+                <div id="summary_area" style="height:0.8rem;width:99%;font-size:16px;line-height:0.4rem;text-align:left;margin-top:0.0rem;border:solid 1px lightgrey;border-top:none;overflow:hidden;text-overflow:ellipsis;">
+                    1、综合情况：本月全厂能耗综合指标全部完成。<br />
+                    2、异常情况：①倾动炉车间，倾动炉重油电耗超0.82%。异常原因：未使用液化气。②动力车间，供水电单耗超3.33%；阳极铜电单耗超6.05%。异常原因：水泵综合效率低，循环水温降低-20%；阳极铜产量超-10%。<br />
+                    3、方案建议：①倾动炉车间：建议根据实际情况合理搭配液化气使用量。②动力车间：建议密切监控循环水温变化情况，合理控制水泵启停。
+                </div>
+                <table style="width:99%;margin-top:0.3rem;border:solid 1px lightgrey;background-color:#CCCCFF;">
+                    <tr>
+                        <th colspan="4" style="height:0.6rem;font-size:16px;background-color:#CCCCFF;" class="nohover noclick">能耗总览</th>
+                    </tr>
+                    <tr>
+                        <th colspan="1" style="height:0.6rem;background-color:#CCCCFF;">总能耗量</th>
+                        <th colspan="1" style="height:0.6rem;background-color:#CCCCFF;">总节约量</th>
+                        <th colspan="1" style="height:0.6rem;background-color:#CCCCFF;">铜冶炼综合能耗</th>
+                        <th colspan="1" style="height:0.6rem;background-color:#CCCCFF;">吨铜新水消耗</th>
+                    </tr>
+                    <tr>
+                        <td colspan="1" id="chart1_1" style="height:2.5rem;width:15%;"></td>
+                        <td colspan="1" id="chart1_2" style="height:2.5rem;width:15%;"></td>
+                        <td colspan="1" id="chart1_3" style="height:2.5rem;width:15%;"></td>
+                        <td colspan="1" id="chart1_4" style="height:2.5rem;width:15%;"></td>
+                    </tr>
+                    <tr id="table_main_data">
+                        <td colspan="1" style="height:0.6rem;font-size:18px;color:black;" class="table_click_2"></td>
+                        <td colspan="1" style="height:0.6rem;font-size:18px;color:black;" class="table_click_2"></td>
+                        <td colspan="1" style="height:0.6rem;font-size:18px;color:black;" class="table_click_2"></td>
+                        <td colspan="1" style="height:0.6rem;font-size:18px;color:black;" class="table_click_2"></td>
+                    </tr>
+                </table>
+                <table style="width:99%;margin-top:0.3rem;border:solid 1px lightgrey;background-color:white;">
+                    <tr>
+                        <th colspan="2" style="height:0.6rem;background-color:white;" class="with_right_border">消耗量</th>
+                        <th colspan="2" style="height:0.6rem;background-color:white;" class="with_right_border">节约量</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="chart2_1" style="height:3.5rem;width:30%;" class="with_right_border"></td>
+                        <td colspan="1" id="chart2_2" style="height:3.5rem;width:15%;"></td>
+                        <td colspan="1" id="chart2_3" style="height:3.5rem;width:15%;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height:0.5rem;font-size:16px;text-align:left;" class="show_table with_right_border show_table_1">详情</td>
+                        <td colspan="2" style="height:0.5rem;font-size:16px;text-align:right;" class="show_table show_table_2">详情</td>
+                    </tr>
+                </table>
+                <table style="width:99%;margin-top:0.3rem;border:solid 1px lightgrey;background-color:#CCCCFF;">
+                    <tr>
+                        <th colspan="1" style="height:0.6rem;background-color:#CCCCFF;" class="with_right_border">考核指标</th>
+                        <th colspan="1" style="height:0.6rem;background-color:#CCCCFF;">冶炼单耗</th>
+                    </tr>
+                    <tr>
+                        <td colspan="1" id="chart3_1" style="height:3.5rem;width:30%;" class="with_right_border"></td>
+                        <td colspan="1" id="chart3_2" style="height:3.5rem;width:30%;" class="with_right_border"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="height:0.5rem;font-size:16px;text-align:left;" class="show_table with_right_border show_table_3">详情</td>
+                        <td colspan="1" style="height:0.5rem;font-size:16px;text-align:right;" class="show_table show_table_4">详情</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="window window-date window-month">
+        <div class="window-body">
+            <div class="sub sub-year">
+                <div class="sub-title">年<img src="/images2/bg-triangle.png" /></div>
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-month">
+                <div class="sub-title">月<img src="/images2/bg-triangle.png" /></div>
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <div class="sub-title">日<img src="/images2/bg-triangle.png" /></div>
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel button-last">取消</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="window" id="window_s">
+        <div class="window-title" id="window-head">
+            <!--<a class="window-close"><img src="/images2/icon-close.png" /></a>-->
+            <h3 style="font-size:18px;text-align:center;"></h3>
+        </div>
+        <div class="window-body">
+            <div class="echart-container" id="window_summary" style="font-size:18px;line-height:32px;">
+            </div>
+            <div class="echart-container" id="window_chart1">
+            </div>
+            <div id="for_table" style="font-size:18px;line-height:32px;">
+            </div>
+        </div>
+    </div>
+
+    <div hidden>
+        <table id="table_consumption" name="" style="width:99%;margin-top:0.2rem;border:solid 1px lightgrey;">
+            <tr>
+                <th rowspan="2" colspan="1">能源名称</th>
+                <th rowspan="2" colspan="1">单位</th>
+                <th rowspan="1" colspan="3">12月</th>
+                <th rowspan="1" colspan="2">1-12月</th>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1">折标煤</th>
+                <th rowspan="1" colspan="1">上月比较(%)</th>
+                <th rowspan="1" colspan="1">同期比较(%)</th>
+                <th rowspan="1" colspan="1">折标煤</th>
+                <th rowspan="1" colspan="1">同期比较(%)</th>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">总能耗量</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">电</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">重油</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+            <!--<tr>
+                <th rowspan="1" colspan="1" class="table_click_1">液化气量</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1"></td>
+            </tr>-->
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">柴油</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">汽油</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">煤</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1" class="table_click_1">天然气</th>
+                <th rowspan="1" colspan="1">tce</th>
+                <td rowspan="1" colspan="1" class="table_click_2"></td>
+                <td rowspan="1" colspan="1" class="table_click_3 table_percent"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+                <td rowspan="1" colspan="1"></td>
+                <td rowspan="1" colspan="1" class="table_percent"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/dst.js"></script>
+    <script src="/js/common/tpReport.js"></script>
+    <script src="/js/common/mywin.js"></script>
+    <script src="/develop/reports/mock_data_zrd.js"></script>
+    <script src="energy-overview-all.js"></script>
+</body>
+</html>

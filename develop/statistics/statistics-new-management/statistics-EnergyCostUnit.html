@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>成本单元管理</title>
+    <link rel="stylesheet" href="/lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="/lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="/lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/style-zrd.css" />
+    <link rel="stylesheet" href="/css/style-zh.css" />
+    <link rel="stylesheet" href="/css/style-zbc.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li class="textli"><input id="search-name" class="search-condition" placeholder="输入统计单元名称进行查询" onfocus="this.placeholder = ''" onblur="    this.placeholder = '输入统计单元名称进行查询'" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form" name="edit_form">
+                    <input type="hidden" name="MeasurePropertyID" id="MeasurePropertyID" />
+                    <input type="hidden" name="ModelBaseID" id="ModelBaseID" />
+                    <input type="hidden" name="MeasurePropertyType" id="MeasurePropertyType" value="9" />
+                    <input type="hidden" name="MeasurePropertyCalMethod" id="MeasurePropertyCalMethod" value="0" />
+                    <ul class="length6">
+                        <li><label>工厂模型</label><input type="text" id="ModelBaseName" name="ModelBaseName" disabled="disabled" /></li>
+                        <li><label>统计单元名称</label><input type="text" id="MeasurePropertyName" name="MeasurePropertyName" /></li>
+                        <li><label>计量介质</label><select id="EnergyMediumID" name="EnergyMediumID" class="dfinput dfselect"></select></li>
+                        <!--<li><label>产品种类</label><select id="ProductClassId" name="ProductClassId" class="dfinput dfselect"></select></li>-->
+                        <li>
+                            <label>统计周期</label><select id="MeasurePropertyTime" name="MeasurePropertyTime" class="dfinput dfselect">
+                                <option value="2">小时</option>
+                                <option value="3">天</option>
+                                <option value="4">月</option>
+                                <option value="5">年</option>
+                                <option value="1">刻</option>
+                            </select>
+                        </li>
+                        <!--<li>
+                            <label>计量类型</label><select id="MeasurePropertyType" name="MeasurePropertyType" class="dfinput dfselect">
+                                <option value="1">输入总量</option>
+                                <option value="2">输出总量</option>
+                                <option value="3">自发量</option>
+                                <option value="4">平衡计量</option>
+                                <option value="5">单耗</option>
+                                <option value="6">预测</option>
+                                <option value="7">计划</option>
+                                <option value="8">其他</option>
+                                <option value="9">成本</option>
+                                <option value="10">折标煤</option>
+                            </select>
+                        </li>-->
+                        <!--<li>
+                            <label>是否展示</label><select id="ShowSign" name="ShowSign" class="dfinput dfselect">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </li>-->
+                        <li>
+                            <label>公式描述</label><a href="javascript:void(0)" id="edit-DESCRIPTIONINFO"><input id="DESCRIPTIONINFO" name="DESCRIPTIONINFO" readonly="readonly" /></a>
+                        </li>
+                        <li>
+                            <label>统计公式</label><a href="javascript:void(0)" id="edit-Formula"><input id="MeasurePropertyCalcFormula" name="MeasurePropertyCalcFormula" readonly="readonly" /></a>
+                        </li>
+                        <!--<li>
+                            <label>周期累积方式</label><select id="MeasurePropertyCalMethod" name="MeasurePropertyCalMethod" class="dfinput dfselect">
+                                <option value="0">常规累积</option>
+                                <option value="1">单耗累积</option>
+                            </select>
+                        </li>-->
+                        <li>
+                            <label>开始计算日期</label><input id="MeasurePropertyCalcStartTime" name="MeasurePropertyCalcStartTime" type="text" class="datetime" />
+                        </li>
+                        <li>
+                            <label>公式状态</label><select id="MeasurePropertyCalcState" name="MeasurePropertyCalcState" class="dfinput dfselect">
+                                <option value="1">正常</option>
+                                <option value="2">停止计算</option>
+                            </select>
+                        </li>
+                        <!--<li><label>绑定计划单元</label><select id="RelativeTargetID" name="RelativeTargetID"></select></li>-->
+                        <li>
+                            <label>备注</label><input id="MeasurePropertyText" name="MeasurePropertyText" type="text" />
+                        </li>
+                        <li><label>更改部门</label><select id="PanelModelBaseID_1" name="PanelModelBaseID_1"></select></li>
+                        <li><label>更改下级</label><select id="PanelModelBaseID_2" name="PanelModelBaseID_2"></select></li>
+                        <li><label>更改下级</label><select id="PanelModelBaseID_3" name="PanelModelBaseID_3"></select></li>
+                        <li><label>更改下级</label><select id="PanelModelBaseID_4" name="PanelModelBaseID_4"></select></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window CrewSchedule_Window" id="CrewSchedule_Window">
+        <h2 class="for-draggable-title" id="CrewSchedule_Window_Drag"></h2>
+        <div class="window-title">
+            公式编辑<a id="window-close"></a>
+        </div>
+        <div class="window-body">
+            <div class="select_area1">
+                <ul>
+                    <li><label>筛选部门</label><select id="ModelBaseID_1" name="ModelBaseID_1"></select></li>
+                    <li><label>筛选下级</label><select id="ModelBaseID_2" name="ModelBaseID_2"></select></li>
+                    <li><label>筛选下级</label><select id="ModelBaseID_3" name="ModelBaseID_3"></select></li>
+                    <li><label>筛选下级</label><select id="ModelBaseID_4" name="ModelBaseID_4"></select></li>
+                    <li><label>筛选名称</label><input type="text" id="MeasurePropertyName_S" name="MeasurePropertyName_S" /><button id="select_by_select_area1">查 询</button></li>
+                </ul>
+            </div>
+            <div class="vertical_area1">
+                <ul>
+                    <li><label>统计单元</label><select id="MeasurePropertyName_W" name="MeasurePropertyName_W"></select><button id="select_measureproperty">选 定</button></li>
+                    <li><label>价格系数</label><select id="MeterPointName_W" name="MeterPointName_W"></select><button id="select_meterpoint">选 定</button></li>
+                </ul>
+            </div>
+            <div class="vertical_area2">
+                <ul>
+                    <li><label>符号</label><button id="select_symbol_add">+</button><button id="select_symbol_subtract">-</button><button id="select_symbol_multiply">*</button><button id="select_symbol_divide">/</button><button id="select_symbol_open_parentheses">(</button><button id="select_symbol_close_parentheses">)</button></li>
+                    <li><label>数字</label><input type="text" id="Number_W" name="Number_W" /><button id="select_number">输 入</button></li>
+                </ul>
+            </div>
+            <div class="vertical_area3">
+                <ul>
+                    <li><label>公式描述</label><textarea id="DESCRIPTIONINFO_W" name="DESCRIPTIONINFO_W"></textarea></li>
+                </ul>
+            </div>
+            <div class="vertical_area4">
+                <ul>
+                    <li><label>统计公式</label><textarea id="MeasurePropertyCalcFormula_W" name="MeasurePropertyCalcFormula_W"></textarea><button id="clear_formula">清 空</button></li>
+                </ul>
+            </div>
+            <div class="buttons vertical_area5">
+                <span class="button window-save" id="window-save">确定</span>
+                <span class="button window-cancel" id="window-cancel">取消</span>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="statistics-EnergyCostUnit.js"></script>
+</body>
+</html>
