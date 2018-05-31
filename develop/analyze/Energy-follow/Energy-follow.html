@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>能耗追踪</title>
+    <link rel="stylesheet" href="/lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="/lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="/lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/style-zh.css" />
+    <link rel="stylesheet" href="/css/style-zbc.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-content echtleftlonger">
+            <div class="content-head">
+                <span id="refresh"></span>
+            </div>
+            <div class="content-body">
+                <div class="tree"></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar dev-length2">
+                    <li><label class="tt"> 开始时间 </label><input type="text"  class="datetime" onclick="laydatetime()" /></li>
+                    <li><label class="tt"> 结束时间 </label><input type="text"  class="datetime" onclick="laydatetime()" /></li>
+                    <li><label class="tt"> 追踪粒度 </label><input type="text"  class="datetime" onclick="laydatetime()" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container"></div>
+                <div class="pagin">
+                    <div class="paginList"></div>
+                </div>
+            </div>
+            <div class="button Charts-type-bar" id="echartbtn1"></div>
+            <div class="button Charts-type-line" id="echartbtn2"></div>
+            <div class="button Charts-type-pie" id="echartbtn3"></div>
+            <div id="echt1"></div>
+            <div id="testtip">请用生产车间4中的数据调试并查看下面的图形分析</div>
+            <div class="button auto-circleon" id="testbtn1" onmousedown="auto_circleon_down()" onmouseup="auto_circleon_up()"></div>
+            <div class="button auto-circleoff" id="testbtn2" onmousedown="auto_circleoff_down()" onmouseup="auto_circleoff_up()"></div>
+            <div class="button ndger-show" id="testbtn3" onmousedown="ndger_show_down()" onmouseup="ndger_show_up()"></div>
+            <div class="button ndger-hide" id="testbtn4" onmousedown="ndger_hide_down()" onmouseup="ndger_hide_up()"></div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="Energy-follow.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>动力车间能源绩效分析报表</title>
+    <link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link href="/css/style-zbc.css" rel="stylesheet" />
+    <link href="/css/style-zrd.css" rel="stylesheet" />
+    <link href="/css/style-zhax.css" rel="stylesheet" />
+    <script src="Faker.js"></script>
+    <style>
+        #curves {
+            display: inline-block;
+            background-color: #267572;
+            color: #fff;
+            border: solid 1px #267572;
+            height: 0.42rem;
+            line-height: 0.42rem;
+            font-size: 0.2rem;
+            font-family: 'Microsoft YaHei';
+            min-width: 1.01rem;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .Static-repoort-grid {
+            width: 10.7rem;
+            border: solid 1px #ccc;
+        }
+
+        #echt-pie {
+            width: 6rem;
+            height: 2.92rem;
+            border: solid 1px #ccc;
+            position: relative;
+            left: 10.7rem;
+            bottom: 2.95rem;
+        }
+        #echt-pie1 {
+            width: 8.35rem;
+            height: 4rem;
+            border: solid 1px #ccc;
+            position: relative;
+            /*left: 16.7rem;*/
+            bottom: 13.04rem;
+        }
+        #echt-pie2 {
+            width: 8.35rem;
+            height: 4rem;
+            border: solid 1px #ccc;
+            position: relative;
+            /*left: 16.7rem;*/
+            bottom: 17.07rem;
+            left:8.36rem
+        }
+        #echt-bar1 {
+            width: 8.35rem;
+            height: 5rem;
+            border: solid 1px #ccc;
+            bottom:2.96rem
+        }
+
+        #echt-bar2 {
+            width: 8.35rem;
+            height: 5rem;
+            border: solid 1px #ccc;
+            position: relative;
+            left: 8.35rem;
+            bottom: 7.99rem;
+        }
+        #echt-bar3 {
+            width: 8.35rem;
+            height: 5rem;
+            border: solid 1px #ccc;
+            position: relative;
+            /*left: 8.35rem;*/
+            bottom: 8rem;
+        }
+        #echt-bar4 {
+            width: 8.35rem;
+            height: 5rem;
+            border: solid 1px #ccc;
+            position: relative;
+            left: 8.35rem;
+            bottom: 13.03rem;
+        }
+        /*#pie-title1 {
+            border: solid 1px #ccc;
+            height: 0.4rem;
+            width: 2rem;
+            position: absolute;
+            left: 4rem;
+            z-index: 10;
+            text-align: center;
+        }
+
+        #pie-title2 {
+            border: solid 1px #ccc;
+            height: 0.4rem;
+            width: 2rem;
+            position: absolute;
+            left: 10.7rem;
+            z-index: 10;
+            text-align: center;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!--<ul class="cvs"></ul>
+            <div class="hr" style="clear:both;"></div>
+            <div class="report-op">
+                <ul>
+                    <li id="export">导出Excel</li>
+                </ul>
+            </div>-->
+            <div class="content-head">
+                <ul class="tab tab-date-type">
+                    <li id="year">年</li>
+                    <li id="month" class="active">月</li>
+                    <li id="day">日</li>
+                </ul>
+            </div>
+            <div class="reportbar date-title-bar">
+                <a href="javascript:void(0)" class="pre-next pre" id="pre">
+                    <cite></cite>
+                    <i>前一年</i>
+                </a>
+                <a href="javascript:void(0)" class="title" id="title">
+                </a>
+                <a href="javascript:void(0)" class="pre-next next" id="next">
+                    <i>后一年</i>
+                    <cite></cite>
+                </a>
+            </div>
+
+
+            <div class="table-container Static-repoort-grid">
+                <table id="table-electrolysis-report" style="width:100%">
+                    <tr>
+                        <th colspan="6">用能概况（折标煤）</th>
+                    </tr>
+                    <tr>
+                        <th>用能分类</th>
+                        <th>实际总能耗</th>
+                        <th>计划总能耗</th>
+                        <th>偏差</th>
+                        <th>同比</th>
+                        <th>环比</th>
+
+                    </tr>
+
+                    <!--<tr id="tr0"></tr>-->
+                </table>
+            </div>
+            <!--<div id="pie-title1">能耗占比</div>-->
+            <!--<div id="pie-title2">成本占比</div>-->
+            <div id="echt-pie"></div>
+
+            <div id="echt-bar1"></div>
+            <div id="echt-bar2"></div>
+            <div id="echt-bar3"></div>
+            <div id="echt-bar4"></div>
+            <div id="echt-pie1"></div>
+            <div id="echt-pie2"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="window window-date window-month">
+        <div class="window-body">
+            <div class="sub sub-year">
+                <div class="sub-title">年<img src="/images2/bg-triangle.png" /></div>
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-month">
+                <div class="sub-title">月<img src="/images2/bg-triangle.png" /></div>
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <div class="sub-title">日<img src="/images2/bg-triangle.png" /></div>
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel button-last">取消</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="../../../js/common/dst.js"></script>
+    <script src="Graphic-Board_all2.js"></script>
+</body>
+</html>

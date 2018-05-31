@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>成本管理</title>
+    <link rel="stylesheet" href="/lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="/lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="/lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/style-zh.css" />
+    <link rel="stylesheet" href="/css/style-zrd.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="tree-selector">
+            <div class="tree-head">
+                <span id="tree-current"></span>
+                <img src="/images2/icon-down-arror.png" />
+            </div>
+            <div class="tree-body">
+                <span id="refresh"></span>
+                <span id="spin"></span>
+                <div class="tree">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar have-tree-selector">
+                    <li class="button export" id="export">导出Excel</li>                    
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-content">
+            <div class="content-body right-panel big-height">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="EnergyPirceID" id="EnergyPirceID" />
+                    <input type="hidden" name="EnergyMediumID" id="EnergyMediumID" />
+                    <ul class="length6">
+                        <li class="textli"><label>价格名称</label><input type="text" id="EnergyPirceName" name="EnergyPirceName"></li>
+                        <li class="textli"><label>计量单位</label><input type="text" id="UnitMeasureName" name="UnitMeasureName" readonly="readonly"></li>
+                        <!--<li class="textli"><label><a id="search-UnitMeasureID" href="javascript:void(0)">[计量单位]</a></label><select id="UnitMeasureID" name="UnitMeasureID"></select></li>-->
+                        <!--<li class="textli"><label>计量单位</label><select id="UnitMeasureID" name="UnitMeasureID"></select></li>-->
+                        <!--<li class="textli"><label><a id="search-MeterPointID" href="javascript:void(0)">[查询计量点]</a></label><select id="MeterPointID" name="MeasurePropertyID" class="search-condition"></select></li>-->
+                        <li class="textli">
+                            <label>价格单位</label><select id="EnergyPirceUOM" name="EnergyPirceUOM" class="dfinput dfselect">
+                                <option value="元">元</option>
+                                <option value="万元">万元</option>
+                            </select>
+                        </li>
+                        <li><label>价格</label><input type="text" id="EnergyPircePrice" name="EnergyPircePrice"></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="/js/wlib/mtree.js"></script>
+    <script src="/js/common/my-tree.js"></script>
+    <script src="analyze-cost-energyprice.js"></script>
+</body>
+</html>

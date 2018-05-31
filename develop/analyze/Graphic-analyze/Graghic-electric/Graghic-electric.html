@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>电力</title>
+    <!--<link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" />-->
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+    <link href="/css/style-zbc.css" rel="stylesheet" />
+    <link href="/css/style-zrd.css" rel="stylesheet" />
+    <script src="../faker.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-content" id="content1">
+            <div class="content-head">
+                <ul class="tab tab-date-type">
+                    <li id="year">年</li>
+                    <li id="month" class="active">月</li>
+                    <li id="day">日</li>
+                </ul>
+            </div>
+            <div class="reportbar date-title-bar">
+                <a href="javascript:void(0)" class="pre-next pre" id="pre">
+                    <cite></cite>
+                    <i>前一月</i>
+                </a>
+                <a href="javascript:void(0)" class="title" id="title">
+                </a>
+                <a href="javascript:void(0)" class="pre-next next" id="next">
+                    <i>后一月</i>
+                    <cite></cite>
+                </a>
+            </div>
+
+
+            <div class="G-echarts" id="G-echarts11">
+            </div>
+            <div class="G-echarts" id="G-echarts41">
+
+            </div>
+            <label class="pie-fig-title1 for-fig-gaselectwo1" id="pie-fig-title1">去年同期比较</label>
+            <label class="pie-fig-title2 for-fig-gaselectwo2" id="pie-fig-title2">当月各厂数据</label>
+            <textarea class="for-human-input" disabled="disabled">
+能耗分析
+分析内容：在集体的共同努力下，各项指标均好于预期。
+            </textarea>
+            <!--<div class="div-btn-forsave">保存</div>
+            <div class="div-btn-forcleanout">清空</div>-->
+        </div>
+    </div>
+    <div class="window window-date window-month">
+        <div class="window-body">
+            <div class="sub sub-year">
+                <div class="sub-title">年<img src="/images2/bg-triangle.png" /></div>
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-month">
+                <div class="sub-title">月<img src="/images2/bg-triangle.png" /></div>
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <div class="sub-title">日<img src="/images2/bg-triangle.png" /></div>
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel button-last">取消</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="../../../../js/common/dst.js"></script>
+    <script src="Graghic-electric.js"></script>
+</body>
+</html>

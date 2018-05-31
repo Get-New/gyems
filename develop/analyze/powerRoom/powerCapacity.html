@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>动力车间调度建议</title>
+	<link href="/lib/Extjs-4.2.3/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+	<link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+	<link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style2.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style-zh.css" rel="stylesheet" />
+	<link href="/css/style-zbc.css" rel="stylesheet" />
+	<link href="/css/style-zrd.css" rel="stylesheet" />
+	<link href="/css/style-zhax.css" rel="stylesheet" />
+	<style>
+		.Static-repoort-grid {
+			width: 16.7rem;
+			border: solid 1px #ccc;
+		}
+
+		.myTitle {
+			width: 100%;
+			text-align: center;
+			font-size: 0.4rem;
+			color: #015b59;
+			font-weight: bold;
+			margin-top: 0.2rem;
+			margin-bottom: 0.1rem;
+		}
+
+		.pTitle {
+			width: 100%;
+			text-align: left;
+			font-size: 0.3rem;
+			color: #015b59;
+			margin-top: 0.1rem;
+			margin-bottom: 0.1rem;
+		}
+
+		td.tdStart {
+			font-weight: bold;
+			color: green;
+		}
+
+		td.tdStop {
+			font-weight: bold;
+			color: red;
+		}
+
+		#echt-line1, #echt-line2 {
+			width: 16.7rem;
+			height: 5rem;
+			border: solid 1px #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main-content">
+			<div class="table-container Static-repoort-grid">
+				<div class="myTitle">总降变压器启停调度建议</div>
+				<div class="pTitle">1.启停调度建议</div>
+				<table id="table-electrolysis-report" style="width:100%">
+					<tr>
+						<th colspan="5">1#总降</th>
+						<th colspan="5">2#总降</th>
+					</tr>
+					<tr>
+						<th>运行状态</th>
+						<th>1#变压器</th>
+						<th>2#变压器</th>
+						<th>3#变压器</th>
+						<th>4#变压器</th>
+						<th>运行状态</th>
+						<th>1#变压器</th>
+						<th>2#变压器</th>
+						<th>3#变压器</th>
+						<th>4#变压器</th>
+					</tr>
+					<tr>
+						<th>当前状态</th>
+						<td class="tdStop">停止</td>
+						<td class="tdStart">启动</td>
+						<td class="tdStart">启动</td>
+						<td class="tdStart">启动</td>
+						<th>当前状态</th>
+						<td class="tdStart">启动</td>
+						<td class="tdStart">启动</td>
+						<td class="tdStop">停止</td>
+						<td class="tdStart">启动</td>
+					</tr>
+					<tr>
+						<th>建议状态</th>
+						<td class="tdStop">停止</td>
+						<td class="tdStart">启动</td>
+						<td class="tdStart">启动</td>
+						<td class="tdStart">启动</td>
+						<th>建议状态</th>
+						<td class="tdStart">启动</td>
+						<td class="tdStart">启动</td>
+						<td class="tdStop">停止</td>
+						<td class="tdStart">启动</td>
+					</tr>
+				</table>
+				<div class="pTitle">2.功率实时监控</div>
+				<table id="table-electrolysis-report" style="width:100%">
+					<tr>
+						<th></th>
+						<th>额定总功率</th>
+						<th>参考平均功率</th>
+						<th>参考最大功率</th>
+						<th>实时总功率</th>
+						<th>当前偏差(%)</th>
+					</tr>
+					<tr>
+						<th>1#总降</th>
+						<td>100</td>
+						<td>85</td>
+						<td>92</td>
+						<td>89</td>
+						<td style="color:blue;">-11.0</td>
+					</tr>
+					<tr>
+						<th>2#总降</th>
+						<td>80</td>
+						<td>68</td>
+						<td>72</td>
+						<td>70</td>
+						<td style="color:blue;">-12.5</td>
+					</tr>
+				</table>
+			</div>
+			<div class="pTitle">3.功率实时趋势</div>
+			<div id="echt-line1"></div>
+			<div id="echt-line2"></div>
+		</div>
+	</div>
+
+	<script src="/js/common/rem.js"></script>
+	<script src="/js/common/jquery-1.12.4.js"></script>
+	<script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+	<script src="/js/common/lodash-3.10.1.js"></script>
+	<script src="/js/common/jquery-ui.js"></script>
+	<script src="/lib/alert/js/alert.js"></script>
+	<script src="/js/common/pagination.js"></script>
+	<script src="/js/common/json-for-ie7.js"></script>
+	<script src="/js/common/util2.js"></script>
+	<script src="/js/common/my-ext-grid2.js"></script>
+	<script src="/js/common/my-right-panel.js"></script>
+	<script src="/js/common/my-form.js"></script>
+	<script src="/js/common/my-ajax.js"></script>
+	<script src="/lib/spin/spin.js"></script>
+	<script src="/js/wlib/mtree.js"></script>
+	<script src="/js/common/my-tree.js"></script>
+	<script src="/lib/laydate/laydate.dev.js"></script>
+	<script src="/js/common/echarts.common.min.js"></script>
+	<script src="../../../js/common/dst.js"></script>
+	<script src="powerCapacity.js"></script>
+</body>
+</html>

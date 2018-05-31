@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>对标管理</title>
+    <link rel="stylesheet" href="/lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="/lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="/lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/style-zh.css" />
+    <link rel="stylesheet" href="/css/style-zbc.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <div class="content-head">
+                <span id="refresh"></span>
+            </div>
+            <div class="grid-container group-container grid-no-pagin">
+
+                <div class="left-bottom-group">
+                    <div class="grid-container group-container-collect " id="group-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content there-left-listdata">
+            <div class="content-head">
+                <ul class="topbar">
+                    <li class="textli"><input id="search-name" type="text" class="search-condition" placeholder="请输入指标项目名称" onfocus="this.placeholder = ''" onblur="    this.placeholder = '请输入指标项目名称'" /></li>
+                    <li class="button query" id="query"><img src="/images2/icon-btn-query.png" />查询</li>
+                    <li class="button add" id="add"><img src="/images2/icon-btn-add.png" />新增</li>
+                    <li class="button export" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container one-grid-body" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="content-body right-panel">
+                <div class="close-button"></div>
+                <div class="arrow-outer"></div>
+                <div class="arrow-inner"></div>
+                <form id="edit-form">
+                    <input type="hidden" name="BenchmarkingBaseID" id="BenchmarkingBaseID" />
+                    <ul class="length4">
+                        <li><label>对标名称</label><input type="text" id="BenchmarkingBaseName" name="BenchmarkingBaseName" /></li>
+                        <li><label><a id="search-kpiparam" href="javascript:void(0)">绩效指标</a></label><select id="EngeryKPIName" name="EngeryKPIName" onchange="Page.BenchmarkingBaseValue_reset()" class="search-condition"></select></li>
+                        <li><label>单位</label><input type="text" id="UnitMeasureName" name="UnitMeasureName" disabled="disabled" /></li>
+                        <li><label>国家标准</label><input type="text" id="EngeryKPIBaseValue" name="EngeryKPIBaseValue" disabled="disabled" /></li>
+                        <li><label>厂内标准</label><input type="text" id="EngeryKPIValue" name="EngeryKPIValue" disabled="disabled" /></li>
+                        <li><label>对标标准</label><input type="text" id="BenchmarkingBaseIndustry" name="BenchmarkingBaseIndustry" /></li>
+                    </ul>
+                </form>
+                <div class="buttons">
+                    <span class="button submit-add" id="submit-add">提交新增</span>
+                    <span class="button submit-edit" id="submit-edit">保存编辑</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--仍需要调整样式-->
+    <!--还没有改好-->
+
+    <script src="/js/common/rem.js"></script>
+
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+
+
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="Energy-combase.js"></script>
+
+
+</body>
+</html>

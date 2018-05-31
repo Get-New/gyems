@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>图形分析页面</title>
+    <link href="/lib/alert/css/alert.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/alert/themes/default/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style-zh.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content" id="content1">
+            <div class="content-head">
+                <ul class="tab-date">
+                    <li id="year">年</li>
+                    <li id="month">月</li>
+                    <li id="day">日</li>
+                </ul>
+            </div>
+            <div class="reportbar">
+                <a href="javascript:void(0)" id="pre">
+                    <<<<
+                </a>
+                <a href="javascript:void(0)" id="title">
+                </a>
+                <a href="javascript:void(0)" id="next">
+                    >>>>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="window window-date window-month">
+        <div class="window-title">
+            选择介质<a id="window-close"></a>
+        </div>
+        <div class="window-body">
+            <div class="sub sub-year">
+                <ul id="years" class="choices"></ul>
+            </div>
+            <hr/>
+            <div class="sub sub-month">
+                <ul id="months" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="sub sub-day">
+                <ul id="days" class="choices"></ul>
+            </div>
+            <hr />
+            <div class="buttons">
+                <span class="button window-save">保存</span>
+                <span class="button window-cancel">取消</span>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/echarts.common.min.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/spin/spin.js"></script>
+    <script src="graphic-analyze-gas.js"></script>
+</body>
+</html>

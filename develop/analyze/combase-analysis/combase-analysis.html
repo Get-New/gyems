@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>能源对标分析</title>
+    <link rel="stylesheet" href="/lib/Extjs-4.2.3/resources/css/ext-all.css" />
+    <link rel="stylesheet" href="/lib/alert/css/alert.css" />
+    <link rel="stylesheet" href="/lib/alert/themes/default/theme.css" />
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/style-zh.css" />
+    <link rel="stylesheet" href="/css/style-zbc.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-content zbcleftcontent">
+            <div class="content-head">
+                <span id="refresh"></span>
+            </div>
+            <div class="grid-container group-container grid-no-pagin">
+                <div class="left-bottom-group">
+                    <div class="grid-container group-container-combase-analysis" id="group-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-head">
+                <ul class="topbar dev-length2">
+                    <li><label class="tt">开始时间 </label><input type="text" class="datetime" onclick="laydatetime()" /></li>
+                    <li><label class="tt">结束时间 </label><input type="text" class="datetime" onclick="laydatetime()" /></li>
+                    <li class="button export" id="export">导出Excel</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="grid-container" id="grid-container">
+                </div>
+                <div class="pagin">
+                    <div class="paginList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middlebar"></div>
+        <div id="echt"></div>
+    </div>
+    <script src="/js/common/rem.js"></script>
+    <script src="/js/common/jquery-1.12.4.js"></script>
+    <script src="/lib/Extjs-4.2.3/ext-all.js"></script>
+    <script src="/js/common/lodash-3.10.1.js"></script>
+    <script src="/js/common/jquery-ui.js"></script>
+    <script src="/lib/alert/js/alert.js"></script>
+    <script src="/js/common/pagination.js"></script>
+    <script src="/js/common/json-for-ie7.js"></script>
+    <script src="/js/common/util2.js"></script>
+    <script src="/lib/laydate/laydate.dev.js"></script>    
+    <script src="/js/common/my-ext-grid2.js"></script>
+    <script src="/js/common/my-right-panel.js"></script>
+    <script src="/js/common/my-form.js"></script>
+    <script src="/js/common/my-ajax.js"></script>
+    <script src="combase-analysis.js"></script>
+
+</body>
+</html>
